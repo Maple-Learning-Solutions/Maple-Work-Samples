@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -6,8 +7,8 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
-            <Link href="/" className="text-2xl font-bold tracking-tight text-white mb-4 block">
-              MAPLE
+            <Link href="/" className="mb-6 block w-fit">
+              <Image src="/logo.png" alt="Maple Learning Solutions Logo" width={140} height={40} className="object-contain" />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               Transforming complex learning requirements into engaging digital experiences. We build the future of corporate training and learning technology.

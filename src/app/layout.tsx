@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Maple Learning Solutions | Digital Learning Experiences & Work Showcase",
   description: "Explore Maple Learning Solutions' digital learning experiences, interactive eLearning, LMS solutions, gamification, immersive learning, and more.",
+  icons: {
+    icon: "/maple-icon.ico",
+  },
 };
 
 export default function RootLayout({

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export default function Navbar() {
@@ -25,8 +26,8 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
-          MAPLE
+        <Link href="/" className="flex items-center">
+          <Image src="/logo.png" alt="Maple Learning Solutions Logo" width={140} height={40} className="object-contain" priority />
         </Link>
 
         {/* Desktop Nav */}
@@ -40,7 +41,7 @@ export default function Navbar() {
 
         <div className="hidden lg:block">
           <Link
-            href="#contact"
+            href="https://www.maplelearningsolutions.com/contact"
             className="px-6 py-2.5 rounded-full text-sm font-medium border border-white/10 hover:bg-white/10 hover:border-white/20 text-white transition-all duration-300"
           >
             Start a Conversation
