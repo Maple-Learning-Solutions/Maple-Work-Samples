@@ -73,7 +73,7 @@ export default function LeadershipDevelopmentPage() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link 
-                href="#samples" 
+                href="#approach" 
                 className="px-8 py-4 bg-maple-green text-black font-semibold rounded-lg hover:bg-opacity-90 transition-all text-center"
               >
                 Explore Our Work
@@ -115,6 +115,106 @@ export default function LeadershipDevelopmentPage() {
                 Great individual contributors don't automatically make great managers. Maple designs sophisticated leadership development programs that equip your high-potentials, front-line managers, and executives with the emotional intelligence, strategic thinking, and coaching skills needed to drive organizational success.
               </p>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Our Approach */}
+      <section id="approach" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
+        <div className="container mx-auto px-6 max-w-[1400px]">
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white uppercase tracking-wider mb-6"
+            >
+              OUR APPROACH <span className="text-slate-400 font-light lowercase">A Holistic Ecosystem for Leadership Growth</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-slate-400 text-lg leading-relaxed"
+            >
+              Maple Learning Solutions takes a holistic approach to leadership development; we understand each learner's specific needs through learner needs analysis. This ensures the solutions are tailored to the individual's role, experience, and development goals.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {[
+              {
+                num: "01",
+                title: "BLENDED LEARNING",
+                desc: "We integrate online learning, coaching, and mentoring, ensuring leaders apply knowledge practically. Personalized guidance enhances skills, creating a well-rounded learning experience tailored to individual roles and goals.",
+                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "02",
+                title: "APPLICATION AND PRACTICE",
+                desc: "Leaders develop competencies in a safe, supportive environment. Hands-on practice strengthens leadership behaviors, ensuring theoretical knowledge translates into measurable workplace impact and enhances decision-making skills.",
+                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "03",
+                title: "SELF-DIRECTED LEARNING",
+                desc: "Empowering leaders with self-driven learning resources encourages continuous growth. Our approach promotes autonomy, enabling professionals to upskill proactively in response to evolving industry demands and leadership challenges.",
+                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "04",
+                title: "FUTURE-READY TECHNOLOGIES",
+                desc: "Leveraging AI-driven solutions, we enhance efficiency and optimize leadership processes. Future-ready leaders embrace technology to streamline workflows, drive innovation, and navigate an evolving digital landscape successfully.",
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "05",
+                title: "SOCIAL AND COLLABORATIVE",
+                desc: "We foster peer-to-peer learning and knowledge sharing, creating a supportive leadership community. Leaders gain diverse perspectives, enhancing adaptability and innovation through shared experiences and collective problem-solving.",
+                image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "06",
+                title: "EVOLVING LEADERSHIP",
+                desc: "Our solutions develop leaders who thrive in dynamic environments. By equipping them with adaptive strategies, we ensure they lead with confidence, resilience, and strategic foresight in changing business landscapes.",
+                image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80"
+              }
+            ].map((benefit, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="group flex flex-col bg-slate-900 border border-white/10 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-maple-green/10 hover:-translate-y-1 hover:border-white/20 transition-all duration-300"
+              >
+                {/* Image Area */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-800 shrink-0">
+                  <div className="absolute top-4 left-4 z-10 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-maple-green font-mono text-sm font-bold shadow-lg">
+                    .{benefit.num}
+                  </div>
+                  <img 
+                    src={benefit.image} 
+                    alt={benefit.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-300"></div>
+                </div>
+
+                {/* Content Area */}
+                <div className="p-8 flex flex-col flex-grow relative bg-slate-900">
+                  <h3 className="text-xl font-bold text-white mb-4 leading-tight group-hover:text-maple-green transition-colors">
+                    {benefit.title}
+                  </h3>
+                  
+                  <p className="text-slate-400 leading-relaxed flex-grow text-sm md:text-[15px]">
+                    {benefit.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -346,12 +446,7 @@ export default function LeadershipDevelopmentPage() {
         </div>
       </section>
 
-      {/* Samples Showcase */}
-      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <ServiceSamplesCarousel samples={relevantSamples} />
-        </div>
-      </section>
+      
 
       
       {/* Why Maple */}

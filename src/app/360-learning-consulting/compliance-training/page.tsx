@@ -73,7 +73,7 @@ export default function ComplianceTrainingPage() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link 
-                href="#samples" 
+                href="#benefits" 
                 className="px-8 py-4 bg-maple-green text-black font-semibold rounded-lg hover:bg-opacity-90 transition-all text-center"
               >
                 Explore Our Work
@@ -120,6 +120,78 @@ export default function ComplianceTrainingPage() {
       </section>
 
       
+      {/* Benefits Section */}
+      <section id="benefits" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white uppercase tracking-wider"
+            >
+              BENEFITS <span className="text-slate-400 font-light lowercase">of Compliance Training</span>
+            </motion.h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                num: "01",
+                title: "REDUCED LEGAL & REGULATORY RISKS",
+                desc: "Compliance training helps employees understand and follow laws and regulations relevant to their roles, reducing the risk of fines, penalties, and lawsuits.",
+                image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "02",
+                title: "MINIMIZED WORKPLACE RISKS",
+                desc: "Compliance training in areas like safety and harassment prevention can help reduce incidents and create a safer work environment.",
+                image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "03",
+                title: "BETTER DECISION-MAKING",
+                desc: "Employees who understand compliance rules can make informed, ethical decisions that align with company values and regulatory requirements.",
+                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
+              }
+            ].map((benefit, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="group flex flex-col bg-slate-900 border border-white/10 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-maple-green/10 hover:-translate-y-1 hover:border-white/20 transition-all duration-300"
+              >
+                {/* Image Area */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-800 shrink-0">
+                  <div className="absolute top-4 left-4 z-10 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-maple-green font-mono text-sm font-bold shadow-lg">
+                    .{benefit.num}
+                  </div>
+                  <img 
+                    src={benefit.image} 
+                    alt={benefit.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-300"></div>
+                </div>
+
+                {/* Content Area */}
+                <div className="p-8 flex flex-col flex-grow relative bg-slate-900">
+                  <h3 className="text-xl font-bold text-white mb-4 leading-tight group-hover:text-maple-green transition-colors">
+                    {benefit.title}
+                  </h3>
+                  
+                  <p className="text-slate-400 leading-relaxed flex-grow text-sm md:text-[15px]">
+                    {benefit.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Key Capabilities */}
       <section className="py-24 relative z-10 bg-slate-900/30">
         <div className="container mx-auto px-6 max-w-[1200px]">
@@ -346,12 +418,7 @@ export default function ComplianceTrainingPage() {
         </div>
       </section>
 
-      {/* Samples Showcase */}
-      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <ServiceSamplesCarousel samples={relevantSamples} />
-        </div>
-      </section>
+
 
       
       {/* Why Maple */}

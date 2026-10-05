@@ -346,10 +346,105 @@ export default function EmployeeOnboardingPage() {
         </div>
       </section>
 
-      {/* Samples Showcase */}
-      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <ServiceSamplesCarousel samples={relevantSamples} />
+      {/* Variety Section */}
+      <section id="variety" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
+        <div className="container mx-auto px-6 max-w-[1400px]">
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white uppercase tracking-wider"
+            >
+              VARIETY <span className="text-slate-400 font-light lowercase">of onboarding solutions</span>
+            </motion.h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {[
+              {
+                num: "01",
+                title: "LEARNING APPS",
+                desc: "Deliver bite-sized onboarding modules directly to new hires' mobile devices, ensuring they can learn anytime, anywhere.",
+                image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "02",
+                title: "VILT/ ILT",
+                desc: "Connect new employees with seasoned experts and peers through live, interactive classroom or virtual instructor-led sessions.",
+                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "03",
+                title: "SIMULATIONS",
+                desc: "Immerse new hires in risk-free environments where they can practice critical job functions and software systems safely.",
+                image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "04",
+                title: "BLENDED LEARNING",
+                desc: "Combine the best of digital self-paced modules with live interactive sessions for a comprehensive onboarding journey.",
+                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "05",
+                title: "VIDEO-BASED SOLUTIONS",
+                desc: "Engage modern learners with high-quality, story-driven video content that introduces company culture and key processes.",
+                image: "https://plus.unsplash.com/premium_vector-1730641497009-0e3a43a0952e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmlkZW8tYmFzZWQlMjBzb2x1dGlvbnN8ZW58MHx8MHx8fDA%3D"
+              },
+              {
+                num: "06",
+                title: "GAMIFIED SOLUTIONS",
+                desc: "Transform standard onboarding into an engaging experience with points, badges, and leaderboards that drive motivation.",
+                image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "07",
+                title: "SCENARIO-BASED LEARNING",
+                desc: "Place employees in realistic workplace situations to develop critical thinking and problem-solving skills from day one.",
+                image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                num: "08",
+                title: "COLLABORATIVE LEARNING",
+                desc: "Foster early connections and teamwork by integrating social learning elements and cohort-based activities into onboarding.",
+                image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80"
+              }
+            ].map((solution, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: (idx % 4) * 0.1 }}
+                className="group flex flex-col bg-slate-900 border border-white/10 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-maple-green/10 hover:-translate-y-1 hover:border-white/20 transition-all duration-300"
+              >
+                {/* Image Area */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-800 shrink-0">
+                  <div className="absolute top-4 left-4 z-10 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-maple-green font-mono text-xs font-bold shadow-lg">
+                    .{solution.num}
+                  </div>
+                  <img 
+                    src={solution.image} 
+                    alt={solution.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-300"></div>
+                </div>
+
+                {/* Content Area */}
+                <div className="p-6 flex flex-col flex-grow relative bg-slate-900">
+                  <h3 className="text-lg font-bold text-white mb-3 leading-tight group-hover:text-maple-green transition-colors">
+                    {solution.title}
+                  </h3>
+                  
+                  <p className="text-slate-400 leading-relaxed flex-grow text-[14px]">
+                    {solution.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
