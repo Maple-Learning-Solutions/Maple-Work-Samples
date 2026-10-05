@@ -6,15 +6,29 @@ import SampleCard from "./SampleCard"
 import SampleFilters from "./SampleFilters"
 import SampleViewer from "./SampleViewer"
 import { motion, AnimatePresence } from "framer-motion"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function WorkSamples() {
   const [activeCategory, setActiveCategory] = useState("All")
   const [selectedSample, setSelectedSample] = useState<WorkSample | null>(null)
+  const [page, setPage] = useState(0)
+
+  const handleCategoryChange = (cat: string) => {
+    setActiveCategory(cat)
+    setPage(0)
+  }
 
   const filteredSamples = samples.filter((sample) => {
     if (activeCategory === "All") return true
     return sample.solution === activeCategory
   })
+
+  const itemsPerPage = 4
+  const totalPages = Math.ceil(filteredSamples.length / itemsPerPage)
+  const currentSamples = filteredSamples.slice(page * itemsPerPage, (page + 1) * itemsPerPage)
+
+  const nextPage = () => setPage((p) => (p + 1) % totalPages)
+  const prevPage = () => setPage((p) => (p - 1 + totalPages) % totalPages)
 
   return (
     <section id="work" className="pt-16 pb-32 relative bg-transparent min-h-screen">
@@ -30,23 +44,54 @@ export default function WorkSamples() {
 
         <SampleFilters 
           activeCategory={activeCategory} 
-          setActiveCategory={setActiveCategory} 
+          setActiveCategory={handleCategoryChange} 
         />
 
-        <motion.div 
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredSamples.map((sample) => (
-              <SampleCard 
-                key={sample.id} 
-                sample={sample} 
-                onClick={setSelectedSample} 
-              />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <div className="relative">
+          <motion.div 
+            layout
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-8"
+          >
+            <AnimatePresence mode="popLayout">
+              {currentSamples.map((sample) => (
+                <SampleCard 
+                  key={sample.id} 
+                  sample={sample} 
+                  onClick={setSelectedSample} 
+                />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-4 mt-8">
+              <button 
+                onClick={prevPage}
+                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors hover:border-maple-green group"
+              >
+                <ChevronLeft size={24} className="group-hover:text-maple-green transition-colors" />
+              </button>
+              
+              <div className="flex gap-2">
+                {Array.from({ length: totalPages }).map((_, i) => (
+                  <button 
+                    key={i}
+                    onClick={() => setPage(i)}
+                    className={`w-2.5 h-2.5 rounded-full transition-colors ${page === i ? 'bg-maple-green' : 'bg-white/20 hover:bg-white/40'}`}
+                    aria-label={`Go to page ${i + 1}`}
+                  />
+                ))}
+              </div>
+
+              <button 
+                onClick={nextPage}
+                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors hover:border-maple-green group"
+              >
+                <ChevronRight size={24} className="group-hover:text-maple-green transition-colors" />
+              </button>
+            </div>
+          )}
+        </div>
 
         {filteredSamples.length === 0 && (
           <div className="py-20 text-center">

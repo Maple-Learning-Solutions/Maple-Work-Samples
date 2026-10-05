@@ -283,8 +283,8 @@ export default function SaasPage() {
               <div className="grid grid-cols-3 text-center border-b border-slate-100 bg-white">
                 <div className="p-6 text-slate-500 font-medium text-sm md:text-base flex items-center justify-center tracking-wider">FEATURES</div>
                 <div className="p-6 bg-emerald-50/50 flex items-center justify-center border-x border-slate-100">
-                  <div className="flex items-center gap-1 font-bold text-2xl md:text-3xl text-emerald-500 tracking-tight">
-                    m<span className="text-emerald-400">^</span>ple
+                  <div className="flex items-center justify-center">
+                    <img src="/logo.png" alt="Maple Logo" className="h-6 md:h-8 object-contain" />
                   </div>
                 </div>
                 <div className="p-6 text-slate-500 font-medium text-sm md:text-base flex items-center justify-center">Other Platforms</div>
