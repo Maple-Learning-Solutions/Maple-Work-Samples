@@ -17,11 +17,11 @@ export default function SampleCard({ sample, onClick }: SampleCardProps) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.3 }}
-      className="group relative flex flex-col bg-slate-900/50 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-maple-green/50 transition-colors duration-300"
+      className="group relative flex flex-col w-full h-full bg-slate-900/50 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-maple-green/50 transition-colors duration-300"
       onClick={() => onClick(sample)}
     >
       {/* Thumbnail Area */}
-      <div className="relative aspect-video bg-black overflow-hidden flex items-center justify-center">
+      <div className="relative w-full shrink-0 aspect-video bg-black overflow-hidden flex items-center justify-center">
         {sample.thumbnail ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img 

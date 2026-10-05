@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased selection:bg-maple-green selection:text-slate-900 bg-black text-slate-50`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.className} antialiased selection:bg-maple-green selection:text-slate-900 bg-black text-slate-50`} suppressHydrationWarning>
         <Navbar />
         <main className="min-h-screen flex flex-col">{children}</main>
         <Footer />

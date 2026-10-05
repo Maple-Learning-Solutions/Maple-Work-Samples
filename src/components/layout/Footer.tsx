@@ -45,6 +45,10 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+            <div className="flex gap-6 items-center mt-8">
+              <Image src="/iso-27001.png" alt="ISO 27001 Certified" width={120} height={120} className="object-contain rounded-full" unoptimized />
+              <Image src="/iso-22301.png" alt="ISO 22301 Certified" width={120} height={120} className="object-contain rounded-full" unoptimized />
+            </div>
           </div>
         </div>
         

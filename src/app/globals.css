@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@source "../components";
 @theme {
   --color-maple-green: #00DC82;
   --color-slate-900: #0f172a;
