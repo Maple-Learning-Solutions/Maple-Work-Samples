@@ -114,10 +114,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Close mobile menu on route change
+  // Close mobile menu and scroll to top (hero section) on route change
   useEffect(() => {
     setMobileMenuOpen(false)
     setActiveDropdown(null)
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }, [pathname])
 
   // Handle click outside to close dropdowns
