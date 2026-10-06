@@ -64,16 +64,16 @@ const navigation: NavItemType[] = [
       { name: "Learning Delivery & Evaluation", href: "/360-learning-consulting/learning-delivery" },
     ]
   },
-  {
-    name: "Talent Services",
-    type: "dropdown",
-    items: [
-      { name: "Talent Services Overview", href: "/talent-services" },
-      { name: "Staff Augmentation", href: "/talent-services/staff-augmentation" },
-      { name: "Managed Learning Solutions", href: "/talent-services/managed-learning-solutions" },
-      { name: "Learning Administration", href: "/talent-services/learning-administration" },
-    ]
-  },
+  // {
+  //   name: "Talent Services",
+  //   type: "dropdown",
+  //   items: [
+  //     { name: "Talent Services Overview", href: "/talent-services" },
+  //     { name: "Staff Augmentation", href: "/talent-services/staff-augmentation" },
+  //     { name: "Managed Learning Solutions", href: "/talent-services/managed-learning-solutions" },
+  //     { name: "Learning Administration", href: "/talent-services/learning-administration" },
+  //   ]
+  // },
   {
     name: "AI Training",
     type: "dropdown",

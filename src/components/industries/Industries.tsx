@@ -48,9 +48,9 @@ export default function Industries() {
                   {industry.description}
                 </p>
                 
-                <div className="flex items-center text-sm font-semibold text-slate-900 group-hover:text-maple-green transition-colors mt-auto pt-4 border-t border-slate-200">
+                {/* <div className="flex items-center text-sm font-semibold text-slate-900 group-hover:text-maple-green transition-colors mt-auto pt-4 border-t border-slate-200">
                   Explore Solutions <ArrowRight size={16} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

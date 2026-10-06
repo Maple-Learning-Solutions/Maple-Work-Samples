@@ -1,114 +1,132 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { samples, WorkSample } from "@/data/samples"
-import SampleCard from "./SampleCard"
-import SampleFilters from "./SampleFilters"
-import SampleViewer from "./SampleViewer"
-import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { SqueezeCarousel, type SqueezeSlide } from "@/components/ui/carousel-squeeze";
+import { motion } from "framer-motion";
 
-export default function WorkSamples() {
-  const [activeCategory, setActiveCategory] = useState("All")
-  const [selectedSample, setSelectedSample] = useState<WorkSample | null>(null)
-  const [page, setPage] = useState(0)
+export const settings = {
+    height: 400,
+    gap: 16,
+    slatGap: 8,
+    slatWidth: 16,
+    radius: 12,
+    duration: 1000,
+    hoverGrow: true,
+    autoplay: true,
+    interval: 5000,
+    controls: true,
+};
 
-  const handleCategoryChange = (cat: string) => {
-    setActiveCategory(cat)
-    setPage(0)
-  }
+type DemoProps = Partial<typeof settings>;
 
-  const filteredSamples = samples.filter((sample) => {
-    if (activeCategory === "All") return true
-    return sample.solution === activeCategory
-  })
+/** A wordmark for the corner of the open panel. */
+const mark = (text: string) => (
+    <span className="text-sm font-medium tracking-wider text-white/90 drop-shadow-lg uppercase bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm border border-white/10">{text}</span>
+);
 
-  const itemsPerPage = 4
-  const totalPages = Math.ceil(filteredSamples.length / itemsPerPage)
-  const currentSamples = filteredSamples.slice(page * itemsPerPage, (page + 1) * itemsPerPage)
+const slides: SqueezeSlide[] = [
+    {
+        id: "immersive-vr",
+        title: "Immersive VR Training.",
+        description:
+            "Train employees in high-risk environments safely with our cutting-edge Virtual Reality simulations.",
+        action: "View Sample",
+        href: "/360-learning-consulting/immersive-learning",
+        overlay: mark("VR/AR Solutions"),
+        image: "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "Person wearing a VR headset looking around",
+    },
+    {
+        id: "gamification",
+        title: "Gamified Learning Experiences.",
+        description:
+            "Boost engagement and retention with leaderboards, badges, and interactive scenario-based learning.",
+        action: "Explore Gamification",
+        href: "/360-learning-consulting/gamification",
+        overlay: mark("Gamification"),
+        image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "Game controller on a desk",
+    },
+    {
+        id: "microlearning",
+        title: "Microlearning Modules.",
+        description:
+            "Bite-sized, focused training content that fits perfectly into the flow of your team's busy workday.",
+        action: "See Microlearning",
+        href: "/360-learning-consulting/microlearning",
+        overlay: mark("Microlearning"),
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "Person looking at a smartphone screen",
+    },
+    {
+        id: "compliance",
+        title: "Interactive Compliance Training.",
+        description:
+            "Turn mandatory compliance courses into engaging, scenario-driven experiences that employees actually enjoy.",
+        action: "View Compliance",
+        href: "/360-learning-consulting/compliance-training",
+        overlay: mark("Compliance"),
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "Business people discussing a document",
+    },
+    {
+        id: "onboarding",
+        title: "Accelerated Employee Onboarding.",
+        description:
+            "Get new hires up to speed faster with our comprehensive digital onboarding programs.",
+        action: "Discover Onboarding",
+        href: "/360-learning-consulting/employee-onboarding",
+        overlay: mark("Onboarding"),
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "Team collaborating in a bright modern office",
+    },
+    {
+        id: "custom-lms",
+        title: "Custom LMS Architecture.",
+        description:
+            "Scalable learning management systems designed from the ground up for your unique organizational needs.",
+        action: "View Architecture",
+        href: "/360-learning-consulting/learning-delivery",
+        overlay: mark("Platform & Tech"),
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+        imageAlt: "Data charts on a computer screen",
+    }
+];
 
-  const nextPage = () => setPage((p) => (p + 1) % totalPages)
-  const prevPage = () => setPage((p) => (p - 1 + totalPages) % totalPages)
+export default function WorkSamples(props: DemoProps) {
+    const options = { ...settings, ...props };
 
-  return (
-    <section id="work" className="pt-16 pb-32 relative bg-transparent min-h-screen">
-      <div className="container mx-auto px-6">
-        <div className="max-w-3xl mb-5">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-            Explore Our Work
-          </h2>
-          <p className="text-xl text-slate-400 font-light">
-            Explore selected digital learning experiences created by Maple.
-          </p>
-        </div>
-
-        <SampleFilters 
-          activeCategory={activeCategory} 
-          setActiveCategory={handleCategoryChange} 
-        />
-
-        <div className="relative">
-          <motion.div 
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-8"
-          >
-            <AnimatePresence mode="popLayout">
-              {currentSamples.map((sample) => (
-                <SampleCard 
-                  key={sample.id} 
-                  sample={sample} 
-                  onClick={setSelectedSample} 
-                />
-              ))}
-            </AnimatePresence>
-          </motion.div>
-
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-4 mt-8">
-              <button 
-                onClick={prevPage}
-                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors hover:border-maple-green group"
-              >
-                <ChevronLeft size={24} className="group-hover:text-maple-green transition-colors" />
-              </button>
-              
-              <div className="flex gap-2">
-                {Array.from({ length: totalPages }).map((_, i) => (
-                  <button 
-                    key={i}
-                    onClick={() => setPage(i)}
-                    className={`w-2.5 h-2.5 rounded-full transition-colors ${page === i ? 'bg-maple-green' : 'bg-white/20 hover:bg-white/40'}`}
-                    aria-label={`Go to page ${i + 1}`}
-                  />
-                ))}
-              </div>
-
-              <button 
-                onClick={nextPage}
-                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors hover:border-maple-green group"
-              >
-                <ChevronRight size={24} className="group-hover:text-maple-green transition-colors" />
-              </button>
+    return (
+        <section id="work" className="py-24 bg-slate-950 relative overflow-hidden">
+            <div className="absolute top-1/2 left-0 w-96 h-96 bg-maple-green/5 blur-[120px] rounded-full pointer-events-none" />
+            
+            <div className="container mx-auto px-6 max-w-[1200px] relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-12"
+                >
+                    <div className="inline-block py-1 px-3 rounded-full bg-maple-green/10 text-maple-green text-sm font-semibold tracking-wider uppercase mb-4 border border-maple-green/20">
+                        Our Portfolio
+                    </div>
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                        Featured <span className="text-maple-green">Work Samples</span>
+                    </h2>
+                    <p className="text-slate-400 text-lg max-w-2xl">
+                        Explore how we've transformed learning experiences across various industries through innovative design and cutting-edge technology.
+                    </p>
+                </motion.div>
+                
+                <div className="w-full">
+                    <SqueezeCarousel 
+                        slides={slides} 
+                        label="Featured Work Samples" 
+                        accent="#00dc82" // user requested green
+                        accentForeground="#ffffff"
+                        {...options} 
+                    />
+                </div>
             </div>
-          )}
-        </div>
-
-        {filteredSamples.length === 0 && (
-          <div className="py-20 text-center">
-            <div className="inline-flex w-16 h-16 rounded-full bg-white/5 items-center justify-center mb-4">
-              <span className="text-2xl">🔍</span>
-            </div>
-            <h3 className="text-xl font-medium text-white mb-2">No experiences found</h3>
-            <p className="text-slate-400">Check back later for more examples in this category.</p>
-          </div>
-        )}
-      </div>
-
-      <SampleViewer 
-        sample={selectedSample} 
-        isOpen={!!selectedSample} 
-        onClose={() => setSelectedSample(null)} 
-      />
-    </section>
-  )
+        </section>
+    );
 }

@@ -120,232 +120,6 @@ export default function EmployeeOnboardingPage() {
       </section>
 
       
-      {/* Key Capabilities */}
-      <section className="py-24 relative z-10 bg-slate-900/30">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="text-center mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-            >
-              Key Capabilities
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-slate-400 max-w-2xl mx-auto"
-            >
-              What we deliver for Employee Onboarding & Engagement
-            </motion.p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Pre-boarding Experiences</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Engage candidates before their first day with mobile-friendly welcome portals and company culture videos.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">30-60-90 Day Journeys</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Structured, blended learning paths that drip-feed information to prevent cognitive overload.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Culture & Values Immersion</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Interactive storytelling and scenario-based modules that demonstrate what your corporate values look like in action.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.30000000000000004 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Manager Toolkits</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Provide hiring managers with checklists, discussion guides, and coaching prompts to support their new team members.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      
-      {/* Use Cases */}
-      <section className="py-24 relative z-10 border-t border-white/5">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-            >
-              Where It Applies
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, width: 0 }}
-              whileInView={{ opacity: 1, width: "80px" }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="h-1 bg-maple-green"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                High-Volume Retail/Hospitality
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Rapid, mobile-first onboarding designed to get hourly workers onto the floor safely and effectively.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Corporate Headquarters
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Deep-dive immersion into complex corporate structures, systems, and strategic objectives.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Remote & Hybrid Workforces
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Virtual onboarding experiences that build connection and community without a physical office.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      
-      {/* Process */}
-      <section className="py-24 relative z-10 border-t border-white/5 bg-[#030712]">
-        <div className="container mx-auto px-6 max-w-[1400px]">
-          <div className="mb-16 md:mb-24 text-center md:text-left">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex flex-col md:flex-row md:items-end gap-4 md:gap-6 justify-center md:justify-start"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider">
-                OUR PROCESS
-              </h2>
-              <p className="text-xl md:text-2xl text-slate-400 font-light pb-1 md:pb-2">
-                From insight to measurable transformation
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
-            {[{"title":"ANALYZE AND ASSESS","desc":"We start by measuring your organization's current performance metrics, establishing a clear baseline that guides our journey forward."},{"title":"UNCOVER OPPORTUNITIES","desc":"Through benchmark analysis and performance mapping, we identify key areas where your organization can maximize its potential."},{"title":"DESIGN STRATEGIC SOLUTIONS","desc":"Our experts collaborate with your team to develop targeted solutions that address root causes and align with your business objectives."},{"title":"DRIVE AND MEASURE IMPACT","desc":"We implement solutions and track progress through data-driven metrics, ensuring measurable improvements and sustainable results."}].map((step, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="relative bg-transparent border border-white/20 pt-20 pb-16 px-6 xl:px-10 flex flex-col h-full hover:border-maple-green/50 transition-colors duration-300"
-              >
-                {/* Number Tab */}
-                <div className="absolute top-0 left-0 bg-maple-green text-black font-bold text-lg px-4 py-2">
-                  .{String(idx + 1).padStart(2, '0')}
-                </div>
-                
-                <h3 className="text-lg md:text-xl font-bold text-white uppercase text-center mb-8 tracking-wide leading-tight">
-                  {step.title}
-                </h3>
-                
-                <div className="flex justify-center mb-8">
-                  <div className="w-8 h-[2px] bg-maple-green opacity-80"></div>
-                </div>
-                
-                <p className="text-slate-400 text-sm md:text-base font-light text-center leading-relaxed">
-                  {step.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Variety Section */}
       <section id="variety" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
         <div className="container mx-auto px-6 max-w-[1400px]">
@@ -449,8 +223,234 @@ export default function EmployeeOnboardingPage() {
       </section>
 
       
+      {/* Process */}
+      <section className="py-24 relative z-10 border-t border-white/5 bg-[#030712]">
+        <div className="container mx-auto px-6 max-w-[1400px]">
+          <div className="mb-16 md:mb-24 text-center md:text-left">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col md:flex-row md:items-end gap-4 md:gap-6 justify-center md:justify-start"
+            >
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider">
+                OUR PROCESS
+              </h2>
+              <p className="text-xl md:text-2xl text-slate-400 font-light pb-1 md:pb-2">
+                From insight to measurable transformation
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
+            {[{"title":"ANALYZE AND ASSESS","desc":"We start by measuring your organization's current performance metrics, establishing a clear baseline that guides our journey forward."},{"title":"UNCOVER OPPORTUNITIES","desc":"Through benchmark analysis and performance mapping, we identify key areas where your organization can maximize its potential."},{"title":"DESIGN STRATEGIC SOLUTIONS","desc":"Our experts collaborate with your team to develop targeted solutions that address root causes and align with your business objectives."},{"title":"DRIVE AND MEASURE IMPACT","desc":"We implement solutions and track progress through data-driven metrics, ensuring measurable improvements and sustainable results."}].map((step, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="relative bg-transparent border border-white/20 pt-20 pb-16 px-6 xl:px-10 flex flex-col h-full hover:border-maple-green/50 transition-colors duration-300"
+              >
+                {/* Number Tab */}
+                <div className="absolute top-0 left-0 bg-maple-green text-black font-bold text-lg px-4 py-2">
+                  .{String(idx + 1).padStart(2, '0')}
+                </div>
+                
+                <h3 className="text-lg md:text-xl font-bold text-white uppercase text-center mb-8 tracking-wide leading-tight">
+                  {step.title}
+                </h3>
+                
+                <div className="flex justify-center mb-8">
+                  <div className="w-8 h-[2px] bg-maple-green opacity-80"></div>
+                </div>
+                
+                <p className="text-slate-400 text-sm md:text-base font-light text-center leading-relaxed">
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Key Capabilities */}
+      <section className="py-24 relative z-10 bg-slate-900/30">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
+              Key Capabilities
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-slate-400 max-w-2xl mx-auto"
+            >
+              What we deliver for Employee Onboarding & Engagement
+            </motion.p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Pre-boarding Experiences</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Engage candidates before their first day with mobile-friendly welcome portals and company culture videos.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">30-60-90 Day Journeys</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Structured, blended learning paths that drip-feed information to prevent cognitive overload.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Culture & Values Immersion</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Interactive storytelling and scenario-based modules that demonstrate what your corporate values look like in action.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.30000000000000004 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Manager Toolkits</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Provide hiring managers with checklists, discussion guides, and coaching prompts to support their new team members.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      
       {/* Why Maple */}
       <WhyMapleAccordion subtitle="Expertise, technology, and learning experiences built around your Employee Onboarding goals." items={[{"title":"Strategic Planning Expertise","desc":"We combine deep instructional design knowledge with industry best practices to create Employee Onboarding strategies that align perfectly with your organizational objectives.","image":"https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"},{"title":"Data-Driven Insights","desc":"Our solutions are never based on guesswork. We utilize continuous performance mapping and learner analytics to adapt and refine our approach for maximum impact.","image":"https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"},{"title":"Proven Industry Experience","desc":"Benefit from extensive consulting expertise across diverse sectors, helping organizations overcome complex challenges with greater confidence and clarity.","image":"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"},{"title":"Results-Focused Approach","desc":"We don't just deliver training; we deliver behavioral change. Our focus remains entirely on tracking progress and ensuring measurable, sustainable business results.","image":"https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"}]} />
+
+      
+      {/* Use Cases */}
+      <section className="py-24 relative z-10 border-t border-white/5">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <div className="mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
+              Where It Applies
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, width: 0 }}
+              whileInView={{ opacity: 1, width: "80px" }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="h-1 bg-maple-green"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                High-Volume Retail/Hospitality
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Rapid, mobile-first onboarding designed to get hourly workers onto the floor safely and effectively.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Corporate Headquarters
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Deep-dive immersion into complex corporate structures, systems, and strategic objectives.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Remote & Hybrid Workforces
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Virtual onboarding experiences that build connection and community without a physical office.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       
       {/* FAQs */}

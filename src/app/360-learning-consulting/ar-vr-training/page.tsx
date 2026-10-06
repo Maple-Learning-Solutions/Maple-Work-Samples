@@ -120,6 +120,14 @@ export default function ArVrTrainingPage() {
       </section>
 
       
+      {/* Samples Showcase */}
+      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <ServiceSamplesCarousel samples={relevantSamples} />
+        </div>
+      </section>
+
+      
       {/* Key Capabilities */}
       <section className="py-24 relative z-10 bg-slate-900/30">
         <div className="container mx-auto px-6 max-w-[1200px]">
@@ -220,6 +228,10 @@ export default function ArVrTrainingPage() {
           </div>
         </div>
       </section>
+
+      
+      {/* Why Maple */}
+      <WhyMapleAccordion subtitle="Immersive learning experiences built to bridge the gap between theory and physical execution." items={[{"title":"Enterprise Deployment Experts","desc":"Building a VR app is only half the battle. Our team ensures secure, scalable deployment across your entire fleet of corporate headsets via established MDM protocols.","image":"https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=2070&auto=format&fit=crop"},{"title":"Fidelity that Matters","desc":"We prioritize our rendering budget on what directly impacts learning—like highly accurate machine control panels—rather than wasting resources on unnecessary cinematic backgrounds.","image":"https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?q=80&w=2012&auto=format&fit=crop"},{"title":"Cognitive Load Management","desc":"We design virtual environments that focus the learner's attention on the task at hand, carefully balancing realism with instructional scaffolding to prevent sensory overload.","image":"https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1974&auto=format&fit=crop"},{"title":"Blended Learning Integration","desc":"VR shouldn't exist in a silo. We seamlessly integrate immersive simulations into your broader learning journey, pairing them with foundational eLearning and on-the-job assessments.","image":"https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop"}]} />
 
       
       {/* Use Cases */}
@@ -346,18 +358,6 @@ export default function ArVrTrainingPage() {
         </div>
       </section>
 
-      {/* Samples Showcase */}
-      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <ServiceSamplesCarousel samples={relevantSamples} />
-        </div>
-      </section>
-
-      
-      {/* Why Maple */}
-      <WhyMapleAccordion subtitle="Immersive learning experiences built to bridge the gap between theory and physical execution." items={[{"title":"Enterprise Deployment Experts","desc":"Building a VR app is only half the battle. Our team ensures secure, scalable deployment across your entire fleet of corporate headsets via established MDM protocols.","image":"https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=2070&auto=format&fit=crop"},{"title":"Fidelity that Matters","desc":"We prioritize our rendering budget on what directly impacts learning—like highly accurate machine control panels—rather than wasting resources on unnecessary cinematic backgrounds.","image":"https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?q=80&w=2012&auto=format&fit=crop"},{"title":"Cognitive Load Management","desc":"We design virtual environments that focus the learner's attention on the task at hand, carefully balancing realism with instructional scaffolding to prevent sensory overload.","image":"https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1974&auto=format&fit=crop"},{"title":"Blended Learning Integration","desc":"VR shouldn't exist in a silo. We seamlessly integrate immersive simulations into your broader learning journey, pairing them with foundational eLearning and on-the-job assessments.","image":"https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop"}]} />
-
-      
       {/* FAQs */}
       <section className="py-24 relative z-10 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-4xl">

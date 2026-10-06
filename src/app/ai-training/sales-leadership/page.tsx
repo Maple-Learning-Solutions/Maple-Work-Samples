@@ -119,177 +119,10 @@ export default function SalesLeadershipPage() {
       </section>
 
       
-      {/* Key Capabilities */}
-      <section className="py-24 relative z-10 bg-slate-900/30">
+      {/* Samples Showcase */}
+      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
         <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="text-center mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-            >
-              Key Capabilities
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-slate-400 max-w-2xl mx-auto"
-            >
-              What we deliver for AI for Sales & Leadership
-            </motion.p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Predictive Sales Analytics</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Train sales leaders to interpret AI-driven forecasts and pipeline health metrics.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Automated Personalization</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Teach reps how to use AI to research prospects and draft hyper-personalized outreach at scale.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Strategic Decision Support</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Equip executives with frameworks for using AI to pressure-test strategies and analyze market trends.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.30000000000000004 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Sales Coaching with AI</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Enable managers to use conversation intelligence tools to provide better, data-backed feedback to their teams.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      
-      {/* Use Cases */}
-      <section className="py-24 relative z-10 border-t border-white/5">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-            >
-              Where It Applies
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, width: 0 }}
-              whileInView={{ opacity: 1, width: "80px" }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="h-1 bg-maple-green"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Sales Kickoffs
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Intensive workshops to align the revenue team on new AI tools and methodologies.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Executive Offsites
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Strategic sessions helping leadership teams understand AI's impact on their business model and industry.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Manager Enablement
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Upskilling mid-level managers to lead teams through technological change and workflow automation.
-              </p>
-            </motion.div>
-          </div>
+          <ServiceSamplesCarousel samples={relevantSamples} />
         </div>
       </section>
 
@@ -423,10 +256,104 @@ export default function SalesLeadershipPage() {
         </div>
       </section>
 
-      {/* Samples Showcase */}
-      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
+      {/* Key Capabilities */}
+      <section className="py-24 relative z-10 bg-slate-900/30">
         <div className="container mx-auto px-6 max-w-[1200px]">
-          <ServiceSamplesCarousel samples={relevantSamples} />
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
+              Key Capabilities
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-slate-400 max-w-2xl mx-auto"
+            >
+              What we deliver for AI for Sales & Leadership
+            </motion.p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Predictive Sales Analytics</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Train sales leaders to interpret AI-driven forecasts and pipeline health metrics.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Automated Personalization</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Teach reps how to use AI to research prospects and draft hyper-personalized outreach at scale.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Strategic Decision Support</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Equip executives with frameworks for using AI to pressure-test strategies and analyze market trends.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.30000000000000004 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Sales Coaching with AI</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Enable managers to use conversation intelligence tools to provide better, data-backed feedback to their teams.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -499,6 +426,79 @@ export default function SalesLeadershipPage() {
               <h3 className="text-xl font-bold text-white mb-3">Immediate Applicability</h3>
               <p className="text-slate-400 font-light leading-relaxed">
                 Participants leave with tangible assets, such as tailored sales prompt libraries and decision frameworks.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      
+      {/* Use Cases */}
+      <section className="py-24 relative z-10 border-t border-white/5">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <div className="mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
+              Where It Applies
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, width: 0 }}
+              whileInView={{ opacity: 1, width: "80px" }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="h-1 bg-maple-green"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Sales Kickoffs
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Intensive workshops to align the revenue team on new AI tools and methodologies.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Executive Offsites
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Strategic sessions helping leadership teams understand AI's impact on their business model and industry.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Manager Enablement
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Upskilling mid-level managers to lead teams through technological change and workflow automation.
               </p>
             </motion.div>
           </div>

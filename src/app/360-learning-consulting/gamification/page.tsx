@@ -20,14 +20,14 @@ export default function GamificationPage() {
   }
 
   // Find relevant samples
-  const relevantSamples = samples.filter(sample => ["gamification-sample-1", "sample-memory-flash-card"].includes(sample.id))
+  const relevantSamples = samples.filter(sample => ["gamification-sample-1", "sample-memory-flash-card", "sample-factory-vr-tour"].includes(sample.id))
 
   return (
     <div className="min-h-screen bg-slate-950 text-white selection:bg-maple-green/30">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url(https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop)" }}
           />
@@ -72,14 +72,14 @@ export default function GamificationPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <Link 
-                href="#samples" 
+              <Link
+                href="#samples"
                 className="px-8 py-4 bg-maple-green text-black font-semibold rounded-lg hover:bg-opacity-90 transition-all text-center"
               >
                 Explore Our Work
               </Link>
-              <Link 
-                href="#contact" 
+              <Link
+                href="#contact"
                 className="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all backdrop-blur-sm border border-white/10 text-center"
               >
                 Let's Talk
@@ -119,12 +119,73 @@ export default function GamificationPage() {
         </div>
       </section>
 
-      
+      {/* Samples Showcase */}
+      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <ServiceSamplesCarousel samples={relevantSamples} />
+        </div>
+      </section>
+
+
+      {/* Process */}
+      <section className="py-24 relative z-10 border-t border-white/5 bg-[#030712]">
+        <div className="container mx-auto px-6 max-w-[1400px]">
+          <div className="mb-16 md:mb-24 text-center md:text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col md:flex-row md:items-end gap-4 md:gap-6 justify-center md:justify-start"
+            >
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider">
+                OUR PROCESS
+              </h2>
+              <p className="text-xl md:text-2xl text-slate-400 font-light pb-1 md:pb-2">
+                From insight to measurable transformation
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
+            {[{ "title": "ANALYZE AND ASSESS", "desc": "We start by measuring your organization's current performance metrics, establishing a clear baseline that guides our journey forward." }, { "title": "UNCOVER OPPORTUNITIES", "desc": "Through benchmark analysis and performance mapping, we identify key areas where your organization can maximize its potential." }, { "title": "DESIGN STRATEGIC SOLUTIONS", "desc": "Our experts collaborate with your team to develop targeted solutions that address root causes and align with your business objectives." }, { "title": "DRIVE AND MEASURE IMPACT", "desc": "We implement solutions and track progress through data-driven metrics, ensuring measurable improvements and sustainable results." }].map((step, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="relative bg-transparent border border-white/20 pt-20 pb-16 px-6 xl:px-10 flex flex-col h-full hover:border-maple-green/50 transition-colors duration-300"
+              >
+                {/* Number Tab */}
+                <div className="absolute top-0 left-0 bg-maple-green text-black font-bold text-lg px-4 py-2">
+                  .{String(idx + 1).padStart(2, '0')}
+                </div>
+
+                <h3 className="text-lg md:text-xl font-bold text-white uppercase text-center mb-8 tracking-wide leading-tight">
+                  {step.title}
+                </h3>
+
+                <div className="flex justify-center mb-8">
+                  <div className="w-8 h-[2px] bg-maple-green opacity-80"></div>
+                </div>
+
+                <p className="text-slate-400 text-sm md:text-base font-light text-center leading-relaxed">
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
+
       {/* Key Capabilities */}
       <section className="py-24 relative z-10 bg-slate-900/30">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="text-center mb-16">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -144,7 +205,7 @@ export default function GamificationPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -221,12 +282,16 @@ export default function GamificationPage() {
         </div>
       </section>
 
-      
+
+      {/* Why Maple */}
+      <WhyMapleAccordion subtitle="Interactive learning mechanics designed to drive intrinsic motivation and measurable engagement." items={[{ "title": "Learning-First Mechanics", "desc": "We don't just add arbitrary points and badges. We carefully align game mechanics with your specific learning objectives to ensure the gameplay directly reinforces the desired behaviors.", "image": "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070&auto=format&fit=crop" }, { "title": "Adult Learning Theory", "desc": "Our gamified solutions are rooted in self-determination theory, ensuring they appeal to adult professionals with meaningful progression systems rather than feeling juvenile.", "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" }, { "title": "Data-Driven Balancing", "desc": "We continuously monitor learner interaction data to balance difficulty curves, ensuring the experience remains challenging enough to be engaging but accessible enough to prevent frustration.", "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" }, { "title": "Seamless LMS Integration", "desc": "Our gamified modules are built to seamlessly integrate with your existing Learning Management System, utilizing xAPI to track detailed interactions far beyond standard completion metrics.", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" }]} />
+
+
       {/* Use Cases */}
       <section className="py-24 relative z-10 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="mb-16">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -244,7 +309,7 @@ export default function GamificationPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -294,75 +359,12 @@ export default function GamificationPage() {
         </div>
       </section>
 
-      
-      {/* Process */}
-      <section className="py-24 relative z-10 border-t border-white/5 bg-[#030712]">
-        <div className="container mx-auto px-6 max-w-[1400px]">
-          <div className="mb-16 md:mb-24 text-center md:text-left">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex flex-col md:flex-row md:items-end gap-4 md:gap-6 justify-center md:justify-start"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider">
-                OUR PROCESS
-              </h2>
-              <p className="text-xl md:text-2xl text-slate-400 font-light pb-1 md:pb-2">
-                From insight to measurable transformation
-              </p>
-            </motion.div>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
-            {[{"title":"ANALYZE AND ASSESS","desc":"We start by measuring your organization's current performance metrics, establishing a clear baseline that guides our journey forward."},{"title":"UNCOVER OPPORTUNITIES","desc":"Through benchmark analysis and performance mapping, we identify key areas where your organization can maximize its potential."},{"title":"DESIGN STRATEGIC SOLUTIONS","desc":"Our experts collaborate with your team to develop targeted solutions that address root causes and align with your business objectives."},{"title":"DRIVE AND MEASURE IMPACT","desc":"We implement solutions and track progress through data-driven metrics, ensuring measurable improvements and sustainable results."}].map((step, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="relative bg-transparent border border-white/20 pt-20 pb-16 px-6 xl:px-10 flex flex-col h-full hover:border-maple-green/50 transition-colors duration-300"
-              >
-                {/* Number Tab */}
-                <div className="absolute top-0 left-0 bg-maple-green text-black font-bold text-lg px-4 py-2">
-                  .{String(idx + 1).padStart(2, '0')}
-                </div>
-                
-                <h3 className="text-lg md:text-xl font-bold text-white uppercase text-center mb-8 tracking-wide leading-tight">
-                  {step.title}
-                </h3>
-                
-                <div className="flex justify-center mb-8">
-                  <div className="w-8 h-[2px] bg-maple-green opacity-80"></div>
-                </div>
-                
-                <p className="text-slate-400 text-sm md:text-base font-light text-center leading-relaxed">
-                  {step.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Samples Showcase */}
-      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <ServiceSamplesCarousel samples={relevantSamples} />
-        </div>
-      </section>
-
-      
-      {/* Why Maple */}
-      <WhyMapleAccordion subtitle="Interactive learning mechanics designed to drive intrinsic motivation and measurable engagement." items={[{"title":"Learning-First Mechanics","desc":"We don't just add arbitrary points and badges. We carefully align game mechanics with your specific learning objectives to ensure the gameplay directly reinforces the desired behaviors.","image":"https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070&auto=format&fit=crop"},{"title":"Adult Learning Theory","desc":"Our gamified solutions are rooted in self-determination theory, ensuring they appeal to adult professionals with meaningful progression systems rather than feeling juvenile.","image":"https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"},{"title":"Data-Driven Balancing","desc":"We continuously monitor learner interaction data to balance difficulty curves, ensuring the experience remains challenging enough to be engaging but accessible enough to prevent frustration.","image":"https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"},{"title":"Seamless LMS Integration","desc":"Our gamified modules are built to seamlessly integrate with your existing Learning Management System, utilizing xAPI to track detailed interactions far beyond standard completion metrics.","image":"https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"}]} />
-
-      
       {/* FAQs */}
       <section className="py-24 relative z-10 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-16">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -373,18 +375,17 @@ export default function GamificationPage() {
           </div>
 
           <div className="space-y-4">
-            {[{"question":"What is gamification in corporate learning?","answer":"It is the application of game-design elements (like narrative, problem-solving, scoring, and progression) in non-game contexts to improve engagement and learning outcomes."},{"question":"Can gamification be integrated into an existing LMS?","answer":"Yes, our gamified modules can be published as SCORM or xAPI packages, tracking scores and completions seamlessly within your current LMS."},{"question":"Can you gamify existing eLearning content?","answer":"Absolutely. We often take existing, low-engagement slide decks or basic eLearning courses and wrap them in a gamified narrative or mechanical structure."},{"question":"How do you measure the effectiveness of gamified learning?","answer":"We look beyond completion rates, measuring repeat engagement, time-on-task, assessment accuracy, and ultimate on-the-job behavioral application."}].map((faq, index) => (
-              <motion.div 
+            {[{ "question": "What is gamification in corporate learning?", "answer": "It is the application of game-design elements (like narrative, problem-solving, scoring, and progression) in non-game contexts to improve engagement and learning outcomes." }, { "question": "Can gamification be integrated into an existing LMS?", "answer": "Yes, our gamified modules can be published as SCORM or xAPI packages, tracking scores and completions seamlessly within your current LMS." }, { "question": "Can you gamify existing eLearning content?", "answer": "Absolutely. We often take existing, low-engagement slide decks or basic eLearning courses and wrap them in a gamified narrative or mechanical structure." }, { "question": "How do you measure the effectiveness of gamified learning?", "answer": "We look beyond completion rates, measuring repeat engagement, time-on-task, assessment accuracy, and ultimate on-the-job behavioral application." }].map((faq, index) => (
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className={`border rounded-2xl overflow-hidden transition-all duration-300 backdrop-blur-sm ${
-                  openFaqIndex === index 
-                    ? "bg-slate-900/80 border-maple-green/50 shadow-lg shadow-maple-green/10" 
+                className={`border rounded-2xl overflow-hidden transition-all duration-300 backdrop-blur-sm ${openFaqIndex === index
+                    ? "bg-slate-900/80 border-maple-green/50 shadow-lg shadow-maple-green/10"
                     : "bg-slate-900/40 border-white/10 hover:bg-slate-900/60 hover:border-white/30"
-                }`}
+                  }`}
               >
                 <button
                   className="w-full px-6 py-6 text-left flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-maple-green"
@@ -395,7 +396,7 @@ export default function GamificationPage() {
                     {openFaqIndex === index ? <Minus size={18} /> : <Plus size={18} />}
                   </span>
                 </button>
-                
+
                 <AnimatePresence>
                   {openFaqIndex === index && (
                     <motion.div

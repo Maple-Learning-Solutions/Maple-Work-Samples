@@ -220,6 +220,60 @@ export default function LeadershipDevelopmentPage() {
       </section>
 
       
+      {/* Process */}
+      <section className="py-24 relative z-10 border-t border-white/5 bg-[#030712]">
+        <div className="container mx-auto px-6 max-w-[1400px]">
+          <div className="mb-16 md:mb-24 text-center md:text-left">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col md:flex-row md:items-end gap-4 md:gap-6 justify-center md:justify-start"
+            >
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider">
+                OUR PROCESS
+              </h2>
+              <p className="text-xl md:text-2xl text-slate-400 font-light pb-1 md:pb-2">
+                From insight to measurable transformation
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
+            {[{"title":"ANALYZE AND ASSESS","desc":"We start by measuring your organization's current performance metrics, establishing a clear baseline that guides our journey forward."},{"title":"UNCOVER OPPORTUNITIES","desc":"Through benchmark analysis and performance mapping, we identify key areas where your organization can maximize its potential."},{"title":"DESIGN STRATEGIC SOLUTIONS","desc":"Our experts collaborate with your team to develop targeted solutions that address root causes and align with your business objectives."},{"title":"DRIVE AND MEASURE IMPACT","desc":"We implement solutions and track progress through data-driven metrics, ensuring measurable improvements and sustainable results."}].map((step, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="relative bg-transparent border border-white/20 pt-20 pb-16 px-6 xl:px-10 flex flex-col h-full hover:border-maple-green/50 transition-colors duration-300"
+              >
+                {/* Number Tab */}
+                <div className="absolute top-0 left-0 bg-maple-green text-black font-bold text-lg px-4 py-2">
+                  .{String(idx + 1).padStart(2, '0')}
+                </div>
+                
+                <h3 className="text-lg md:text-xl font-bold text-white uppercase text-center mb-8 tracking-wide leading-tight">
+                  {step.title}
+                </h3>
+                
+                <div className="flex justify-center mb-8">
+                  <div className="w-8 h-[2px] bg-maple-green opacity-80"></div>
+                </div>
+                
+                <p className="text-slate-400 text-sm md:text-base font-light text-center leading-relaxed">
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      
+
+      
       {/* Key Capabilities */}
       <section className="py-24 relative z-10 bg-slate-900/30">
         <div className="container mx-auto px-6 max-w-[1200px]">
@@ -322,6 +376,10 @@ export default function LeadershipDevelopmentPage() {
       </section>
 
       
+      {/* Why Maple */}
+      <WhyMapleAccordion subtitle="Transforming high-potential talent into confident, strategic organizational leaders." items={[{"title":"Contextualized Leadership Scenarios","desc":"We reject off-the-shelf management theory. Our programs immerse leaders in the specific, nuanced challenges they will actually face within your organization's unique culture.","image":"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"},{"title":"Cohort-Based Learning","desc":"Leadership is collaborative. We design structured cohort experiences that foster peer-to-peer mentoring, cross-functional networking, and shared organizational alignment.","image":"https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"},{"title":"Continuous Feedback Loops","desc":"True development requires continuous reflection. We integrate 360-degree feedback mechanisms and practical application assignments to ensure skills are applied on the job.","image":"https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"},{"title":"Executive Alignment","desc":"We work directly with your executive sponsors to ensure the leadership competencies we develop are directly tied to the strategic future of the business.","image":"https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=1932&auto=format&fit=crop"}]} />
+
+      
       {/* Use Cases */}
       <section className="py-24 relative z-10 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-[1200px]">
@@ -393,64 +451,6 @@ export default function LeadershipDevelopmentPage() {
           </div>
         </div>
       </section>
-
-      
-      {/* Process */}
-      <section className="py-24 relative z-10 border-t border-white/5 bg-[#030712]">
-        <div className="container mx-auto px-6 max-w-[1400px]">
-          <div className="mb-16 md:mb-24 text-center md:text-left">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex flex-col md:flex-row md:items-end gap-4 md:gap-6 justify-center md:justify-start"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider">
-                OUR PROCESS
-              </h2>
-              <p className="text-xl md:text-2xl text-slate-400 font-light pb-1 md:pb-2">
-                From insight to measurable transformation
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
-            {[{"title":"ANALYZE AND ASSESS","desc":"We start by measuring your organization's current performance metrics, establishing a clear baseline that guides our journey forward."},{"title":"UNCOVER OPPORTUNITIES","desc":"Through benchmark analysis and performance mapping, we identify key areas where your organization can maximize its potential."},{"title":"DESIGN STRATEGIC SOLUTIONS","desc":"Our experts collaborate with your team to develop targeted solutions that address root causes and align with your business objectives."},{"title":"DRIVE AND MEASURE IMPACT","desc":"We implement solutions and track progress through data-driven metrics, ensuring measurable improvements and sustainable results."}].map((step, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="relative bg-transparent border border-white/20 pt-20 pb-16 px-6 xl:px-10 flex flex-col h-full hover:border-maple-green/50 transition-colors duration-300"
-              >
-                {/* Number Tab */}
-                <div className="absolute top-0 left-0 bg-maple-green text-black font-bold text-lg px-4 py-2">
-                  .{String(idx + 1).padStart(2, '0')}
-                </div>
-                
-                <h3 className="text-lg md:text-xl font-bold text-white uppercase text-center mb-8 tracking-wide leading-tight">
-                  {step.title}
-                </h3>
-                
-                <div className="flex justify-center mb-8">
-                  <div className="w-8 h-[2px] bg-maple-green opacity-80"></div>
-                </div>
-                
-                <p className="text-slate-400 text-sm md:text-base font-light text-center leading-relaxed">
-                  {step.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      
-
-      
-      {/* Why Maple */}
-      <WhyMapleAccordion subtitle="Transforming high-potential talent into confident, strategic organizational leaders." items={[{"title":"Contextualized Leadership Scenarios","desc":"We reject off-the-shelf management theory. Our programs immerse leaders in the specific, nuanced challenges they will actually face within your organization's unique culture.","image":"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"},{"title":"Cohort-Based Learning","desc":"Leadership is collaborative. We design structured cohort experiences that foster peer-to-peer mentoring, cross-functional networking, and shared organizational alignment.","image":"https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"},{"title":"Continuous Feedback Loops","desc":"True development requires continuous reflection. We integrate 360-degree feedback mechanisms and practical application assignments to ensure skills are applied on the job.","image":"https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"},{"title":"Executive Alignment","desc":"We work directly with your executive sponsors to ensure the leadership competencies we develop are directly tied to the strategic future of the business.","image":"https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=1932&auto=format&fit=crop"}]} />
 
       
       {/* FAQs */}

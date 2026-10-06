@@ -95,7 +95,7 @@ export const samples: WorkSample[] = [
     industry: "Healthcare",
     type: "video",
     url: "https://samples.maplelearningsolutions.com/samples/Find%20the%20Way.mp4",
-    thumbnail: "https://maple.maplelearningsolutions.com/wp-content/V1-Presentation_Clip.mp4",
+    thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "sample-pharma-vr-demo",
@@ -116,6 +116,17 @@ export const samples: WorkSample[] = [
     type: "iframe",
     url: "https://mapledemo.s3.eu-north-1.amazonaws.com/Memory+Flash+Card/story.html",
     thumbnail: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    featured: true,
+  },
+  {
+    id: "sample-factory-vr-tour",
+    title: "Tech Demo Factory VR Tour",
+    description: "Immersive VR tour demonstration.",
+    solution: "VR / AR",
+    industry: "Manufacturing",
+    type: "video",
+    url: "https://samples.maplelearningsolutions.com/samples/Tech_Demo_Factory-VR_Tour.mp4",
+    thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     featured: true,
   }
 ]

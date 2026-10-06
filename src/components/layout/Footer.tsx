@@ -45,11 +45,14 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-            <div className="flex gap-6 items-center mt-8">
-              <Image src="/iso-27001.png" alt="ISO 27001 Certified" width={120} height={120} className="object-contain rounded-full" unoptimized />
-              <Image src="/iso-22301.png" alt="ISO 22301 Certified" width={120} height={120} className="object-contain rounded-full" unoptimized />
-            </div>
           </div>
+        </div>
+        
+        <div className="flex flex-wrap justify-center md:justify-end gap-8 items-center mb-12">
+          <Image src="/iso-27001.png" alt="ISO 27001 Certified" width={90} height={90} className="object-contain rounded-full shrink-0" unoptimized />
+          <Image src="/iso-22301.png" alt="ISO 22301 Certified" width={90} height={90} className="object-contain rounded-full shrink-0" unoptimized />
+          <Image src="/iso.webp" alt="ISO Certified" width={90} height={90} className="object-contain rounded-full shrink-0" unoptimized />
+          <Image src="/msme1.webp" alt="MSME Certified" width={90} height={90} className="object-contain rounded-full shrink-0" unoptimized />
         </div>
         
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">

@@ -119,177 +119,10 @@ export default function StaffAugmentationPage() {
       </section>
 
       
-      {/* Key Capabilities */}
-      <section className="py-24 relative z-10 bg-slate-900/30">
+      {/* Samples Showcase */}
+      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
         <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="text-center mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-            >
-              Key Capabilities
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-slate-400 max-w-2xl mx-auto"
-            >
-              What we deliver for L&D Staff Augmentation
-            </motion.p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Instructional Designers</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Experts in adult learning theory, storyboarding, and scriptwriting across all modalities.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">eLearning Developers</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Technical specialists fluent in Articulate Storyline, Rise, Captivate, and custom HTML5 development.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Learning Strategists</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Senior consultants who can design multi-year learning architectures and change management plans.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.30000000000000004 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Multimedia Specialists</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Video editors, animators, and graphic designers focused specifically on educational content.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      
-      {/* Use Cases */}
-      <section className="py-24 relative z-10 border-t border-white/5">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-            >
-              Where It Applies
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, width: 0 }}
-              whileInView={{ opacity: 1, width: "80px" }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="h-1 bg-maple-green"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Major System Rollouts
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Scaling up a team temporarily to create training for a new Salesforce or Workday implementation.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Maternity/Leave Cover
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Seamlessly filling a critical gap in your L&D team without losing project momentum.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Specialized Projects
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Bringing in a gamification or VR expert for a single, high-stakes initiative.
-              </p>
-            </motion.div>
-          </div>
+          <ServiceSamplesCarousel samples={relevantSamples} />
         </div>
       </section>
 
@@ -423,10 +256,104 @@ export default function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* Samples Showcase */}
-      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
+      {/* Key Capabilities */}
+      <section className="py-24 relative z-10 bg-slate-900/30">
         <div className="container mx-auto px-6 max-w-[1200px]">
-          <ServiceSamplesCarousel samples={relevantSamples} />
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
+              Key Capabilities
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-slate-400 max-w-2xl mx-auto"
+            >
+              What we deliver for L&D Staff Augmentation
+            </motion.p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Instructional Designers</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Experts in adult learning theory, storyboarding, and scriptwriting across all modalities.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">eLearning Developers</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Technical specialists fluent in Articulate Storyline, Rise, Captivate, and custom HTML5 development.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Learning Strategists</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Senior consultants who can design multi-year learning architectures and change management plans.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.30000000000000004 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Multimedia Specialists</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Video editors, animators, and graphic designers focused specifically on educational content.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -499,6 +426,79 @@ export default function StaffAugmentationPage() {
               <h3 className="text-xl font-bold text-white mb-3">Guaranteed Continuity</h3>
               <p className="text-slate-400 font-light leading-relaxed">
                 If a contractor needs to leave due to unforeseen circumstances, we seamlessly transition a replacement.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      
+      {/* Use Cases */}
+      <section className="py-24 relative z-10 border-t border-white/5">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <div className="mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
+              Where It Applies
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, width: 0 }}
+              whileInView={{ opacity: 1, width: "80px" }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="h-1 bg-maple-green"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Major System Rollouts
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Scaling up a team temporarily to create training for a new Salesforce or Workday implementation.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Maternity/Leave Cover
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Seamlessly filling a critical gap in your L&D team without losing project momentum.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Specialized Projects
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Bringing in a gamification or VR expert for a single, high-stakes initiative.
               </p>
             </motion.div>
           </div>

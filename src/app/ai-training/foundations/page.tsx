@@ -119,177 +119,10 @@ export default function FoundationsPage() {
       </section>
 
       
-      {/* Key Capabilities */}
-      <section className="py-24 relative z-10 bg-slate-900/30">
+      {/* Samples Showcase */}
+      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
         <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="text-center mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-            >
-              Key Capabilities
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-slate-400 max-w-2xl mx-auto"
-            >
-              What we deliver for AI Foundations
-            </motion.p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Prompt Engineering Essentials</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Teach employees how to craft effective prompts to generate high-quality, relevant outputs.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">AI Ethics & Security</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Establish clear boundaries on data privacy, bias recognition, and responsible AI usage within corporate environments.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Workflow Integration</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Identify repetitive tasks and bottlenecks that can be immediately streamlined using basic AI tools.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.30000000000000004 }}
-              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="flex items-start gap-4 relative z-10">
-                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Continuous Adaptation</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                    Frameworks for keeping skills updated as AI capabilities and tools evolve.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      
-      {/* Use Cases */}
-      <section className="py-24 relative z-10 border-t border-white/5">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-            >
-              Where It Applies
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, width: 0 }}
-              whileInView={{ opacity: 1, width: "80px" }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="h-1 bg-maple-green"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Enterprise Rollouts
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Train the entire workforce during the deployment of tools like Microsoft Copilot or ChatGPT Enterprise.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                New Hire Onboarding
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Incorporate baseline AI literacy into standard employee induction programs.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                Digital Transformation Initiatives
-              </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Support broader organizational shifts toward digital-first and data-driven cultures.
-              </p>
-            </motion.div>
-          </div>
+          <ServiceSamplesCarousel samples={relevantSamples} />
         </div>
       </section>
 
@@ -423,10 +256,104 @@ export default function FoundationsPage() {
         </div>
       </section>
 
-      {/* Samples Showcase */}
-      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
+      {/* Key Capabilities */}
+      <section className="py-24 relative z-10 bg-slate-900/30">
         <div className="container mx-auto px-6 max-w-[1200px]">
-          <ServiceSamplesCarousel samples={relevantSamples} />
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
+              Key Capabilities
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-slate-400 max-w-2xl mx-auto"
+            >
+              What we deliver for AI Foundations
+            </motion.p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Prompt Engineering Essentials</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Teach employees how to craft effective prompts to generate high-quality, relevant outputs.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">AI Ethics & Security</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Establish clear boundaries on data privacy, bias recognition, and responsible AI usage within corporate environments.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Workflow Integration</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Identify repetitive tasks and bottlenecks that can be immediately streamlined using basic AI tools.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.30000000000000004 }}
+              className="bg-slate-950/50 border border-white/10 p-8 rounded-2xl hover:border-maple-green/50 transition-colors group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-maple-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4 relative z-10">
+                <CheckCircle2 className="text-maple-green w-6 h-6 shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Continuous Adaptation</h3>
+                  <p className="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Frameworks for keeping skills updated as AI capabilities and tools evolve.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -499,6 +426,79 @@ export default function FoundationsPage() {
               <h3 className="text-xl font-bold text-white mb-3">Scalable Deployment</h3>
               <p className="text-slate-400 font-light leading-relaxed">
                 Our foundation modules can be seamlessly integrated into your existing LMS for rapid, company-wide distribution.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      
+      {/* Use Cases */}
+      <section className="py-24 relative z-10 border-t border-white/5">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <div className="mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
+              Where It Applies
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, width: 0 }}
+              whileInView={{ opacity: 1, width: "80px" }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="h-1 bg-maple-green"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Enterprise Rollouts
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Train the entire workforce during the deployment of tools like Microsoft Copilot or ChatGPT Enterprise.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                New Hire Onboarding
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Incorporate baseline AI literacy into standard employee induction programs.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 hover:bg-slate-900 hover:border-white/20 transition-all group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <ArrowRight className="w-5 h-5 text-maple-green opacity-0 -ml-7 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                Digital Transformation Initiatives
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Support broader organizational shifts toward digital-first and data-driven cultures.
               </p>
             </motion.div>
           </div>
