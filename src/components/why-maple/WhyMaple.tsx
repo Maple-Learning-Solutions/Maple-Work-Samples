@@ -98,7 +98,7 @@ const tops2 = [...tops.slice(30), ...tops.slice(0, 30)];
 
 export default function WhyMaple() {
   return (
-    <section className="py-24 bg-slate-950 relative overflow-hidden border-t border-white/5">
+    <section className="py-12 md:py-16 bg-slate-950 relative overflow-hidden border-t border-white/5">
       {/* Background ambient glow */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-900/10 blur-[120px]" />
@@ -110,7 +110,7 @@ export default function WhyMaple() {
         {/* Mobile View: Clean, structured grid layout */}
         <div className="lg:hidden flex flex-col space-y-12">
           <div className="text-center mb-8">
-            <h2 className="text-xl md:text-2xl tracking-[0.2em] font-light text-slate-300 uppercase mb-3">
+            <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-xl tracking-[0.2em] text-slate-300 mb-3">
               Why Maple Learning Solutions
             </h2>
             <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
@@ -159,7 +159,7 @@ export default function WhyMaple() {
              <h3 className="text-lg tracking-[0.2em] text-slate-300 uppercase font-light mb-3">
                Why Maple Learning Solutions
              </h3>
-             <h2 className="text-4xl font-bold text-white tracking-tight">
+             <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-white tracking-tight">
                IS YOUR <span className="text-maple-green">IDEAL PARTNER</span>
              </h2>
           </motion.div>

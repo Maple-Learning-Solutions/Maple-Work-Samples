@@ -22,7 +22,7 @@ export default function SaasPage() {
   const relevantSamples = samples.filter(sample => ["saas-lms-implementation"].includes(sample.id))
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white selection:bg-maple-green/30">
+    <div className="min-h-screen bg-transparent text-white selection:bg-maple-green/30">
       {/* Hero Section - SaaS Dashboard Layout */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden min-h-[90vh] flex flex-col items-center justify-center">
         {/* Modern SaaS Background */}
@@ -140,7 +140,7 @@ export default function SaasPage() {
       </section>
 
       {/* Logos & Stats Section (Off-White Background) */}
-      <section className="py-20 bg-[#F8F9FA] text-slate-900 overflow-hidden border-t border-slate-200">
+      <section className="py-12 md:py-16 bg-[#F8F9FA] text-slate-900 overflow-hidden border-t border-slate-200">
         <div className="container mx-auto px-6 max-w-[1400px]">
           
           {/* Trusted By Logos */}
@@ -196,7 +196,7 @@ export default function SaasPage() {
           {/* AI LMS Stats Section */}
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+              <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-slate-900 mb-6 tracking-tight">
                 See how powerful and complete our AI LMS is <br className="hidden md:block" /> for UAE organisations!
               </h2>
               <p className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
@@ -270,7 +270,7 @@ export default function SaasPage() {
             </div>
             
             <div className="text-center mb-12 relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+              <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-slate-900 mb-6 tracking-tight">
                 Traditional LMS platforms don't cut it<br/>anymore
               </h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto">
@@ -329,7 +329,7 @@ export default function SaasPage() {
               {/* Orange Quarter Circle */}
               <div className="absolute bottom-30 right-[25%] w-16 h-16 bg-[#F97316] rounded-bl-full z-0 hidden md:block" />
 
-              <div className="relative z-10 px-8 py-16 md:px-16 md:py-20 flex flex-col md:w-[65%]">
+              <div className="relative z-10 px-8 py-16 md:px-16 md:py-12 md:py-16 flex flex-col md:w-[65%]">
                 <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
                   Discover the Full Capabilities of MapleLMS
                 </h3>
@@ -365,14 +365,14 @@ export default function SaasPage() {
 
       
       {/* FAQs */}
-      <section className="py-24 relative z-10 border-t border-white/5">
+      <section className="py-12 md:py-16 relative z-10 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-16">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-6"
+              className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-6"
             >
               Frequently Asked Questions
             </motion.h2>

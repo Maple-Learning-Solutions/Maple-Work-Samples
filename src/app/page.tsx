@@ -8,11 +8,9 @@ import WhyMaple from "@/components/why-maple/WhyMaple";
 import Testimonials from "@/components/testimonials/Testimonials";
 import FAQ from "@/components/faq/FAQ";
 import CTA from "@/components/cta/CTA";
-import PageBackground from "@/components/layout/PageBackground";
-
 export default function Home() {
   return (
-    <PageBackground>
+    <>
       <main>
         <Hero />
         <Statistics />
@@ -25,6 +23,6 @@ export default function Home() {
         <FAQ />
         <CTA />
       </main>
-    </PageBackground>
+    </>
   );
 }

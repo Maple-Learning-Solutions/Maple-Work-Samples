@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Awards() {
   return (
-    <section className="py-24 relative bg-slate-950 overflow-hidden border-t border-white/5">
+    <section className="py-12 md:py-16 relative bg-slate-950 overflow-hidden border-t border-white/5">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-maple-green/5 blur-[120px] rounded-full pointer-events-none" />
@@ -21,7 +21,7 @@ export default function Awards() {
         >
           
           
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+          <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
             YOU DESERVE <span className="text-maple-green">AWARD WINNING</span> SOLUTIONS
           </h2>
           

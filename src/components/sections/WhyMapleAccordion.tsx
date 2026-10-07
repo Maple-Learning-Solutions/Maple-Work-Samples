@@ -23,7 +23,7 @@ export default function WhyMapleAccordion({ subtitle, items }: WhyMapleProps) {
   };
 
   return (
-    <section className="py-24 relative z-10 bg-[#030712] border-t border-white/5">
+    <section className="py-12 md:py-16 relative z-10 bg-[#030712] border-t border-white/5">
       <div className="container mx-auto px-6 max-w-[1400px]">
         {/* Editorial Heading */}
         <div className="mb-12 md:mb-16 text-center lg:text-left">
@@ -31,9 +31,9 @@ export default function WhyMapleAccordion({ subtitle, items }: WhyMapleProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-white uppercase tracking-wider mb-4"
+            className="font-satoshi font-bold text-4xl md:text-5xl text-white tracking-wider mb-4"
           >
-            WHY MAPLE
+            Why Maple
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

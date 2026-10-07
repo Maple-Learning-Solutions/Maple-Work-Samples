@@ -96,7 +96,7 @@ export default function WorkSamples(props: DemoProps) {
     const options = { ...settings, ...props };
 
     return (
-        <section id="work" className="py-24 bg-slate-950 relative overflow-hidden">
+        <section id="work" className="py-12 md:py-16 relative overflow-hidden">
             <div className="absolute top-1/2 left-0 w-96 h-96 bg-maple-green/5 blur-[120px] rounded-full pointer-events-none" />
             
             <div className="container mx-auto px-6 max-w-[1200px] relative z-10">
@@ -109,7 +109,7 @@ export default function WorkSamples(props: DemoProps) {
                     <div className="inline-block py-1 px-3 rounded-full bg-maple-green/10 text-maple-green text-sm font-semibold tracking-wider uppercase mb-4 border border-maple-green/20">
                         Our Portfolio
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                    <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-6">
                         Featured <span className="text-maple-green">Work Samples</span>
                     </h2>
                     <p className="text-slate-400 text-lg max-w-2xl">

@@ -4,7 +4,7 @@ import { CosmicParallaxBg } from "@/components/ui/parallax-cosmic-background"
 export default function Hero() {
   return (
     <CosmicParallaxBg className="min-h-[100dvh] pt-20 flex flex-col justify-center bg-transparent">
-      <div className="container mx-auto px-6 flex flex-col justify-center items-center text-center relative z-10 py-10 md:py-20">
+      <div className="container mx-auto px-6 flex flex-col justify-center items-center text-center relative z-10 py-10 md:py-12 md:py-16">
         
         {/* Eyebrow */}
         <div className="flex items-center gap-2 mb-8">

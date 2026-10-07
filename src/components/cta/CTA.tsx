@@ -9,7 +9,7 @@ export default function CTA() {
   };
 
   return (
-    <section id="contact" className="py-24 relative bg-transparent overflow-hidden px-4 md:px-6">
+    <section id="contact" className="py-12 md:py-16 relative bg-transparent overflow-hidden px-4 md:px-6">
       <div className="max-w-[1200px] mx-auto relative z-10">
         <CtaCard
           title="Let's Create Your Next Learning Experience"

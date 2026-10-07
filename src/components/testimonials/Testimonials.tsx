@@ -9,7 +9,7 @@ export default function Testimonials() {
     <section id="testimonials" className="py-32 relative z-10 border-y border-white/5">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-6 tracking-tight">
             What Our Clients Say
           </h2>
         </div>

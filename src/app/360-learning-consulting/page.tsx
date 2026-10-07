@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function ThreeSixtyLearningConsultingCategoryPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white selection:bg-maple-green/30">
+    <div className="min-h-screen bg-transparent text-white selection:bg-maple-green/30">
       {/* Category Hero */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
@@ -33,11 +33,11 @@ export default function ThreeSixtyLearningConsultingCategoryPage() {
       </section>
 
       {/* Overview */}
-      <section className="py-24 relative z-10 border-t border-white/5">
+      <section className="py-12 md:py-16 relative z-10 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-6">
                 Overview
               </h2>
               <div className="w-20 h-1 bg-maple-green mb-8"></div>
@@ -52,10 +52,10 @@ export default function ThreeSixtyLearningConsultingCategoryPage() {
       </section>
 
       {/* Featured Services */}
-      <section className="py-24 relative z-10 bg-slate-900/30 border-t border-white/5">
+      <section className="py-12 md:py-16 relative z-10 bg-slate-900/30 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-4">
               Explore 360° Learning Consulting
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">

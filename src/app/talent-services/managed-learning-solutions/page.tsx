@@ -22,7 +22,7 @@ export default function ManagedLearningSolutionsPage() {
   const relevantSamples = samples // TODO: Filter specific samples per page using sample.id
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white selection:bg-maple-green/30">
+    <div className="min-h-screen bg-transparent text-white selection:bg-maple-green/30">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden min-h-[70vh] flex items-center">
         <div className="absolute inset-0 z-0">
@@ -89,38 +89,45 @@ export default function ManagedLearningSolutionsPage() {
       </section>
 
       {/* Introduction */}
-      <section className="py-24 relative z-10 border-t border-white/5">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="relative z-10 border-t border-white/5 bg-transparent overflow-hidden">
+        <div className="flex flex-col md:flex-row items-stretch">
+          {/* Left Side: Full Bleed Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="w-full md:w-1/2 relative min-h-[300px] md:min-h-[500px]"
+          >
+            <img 
+              src="/img/Remote Learning Workspace.png" 
+              alt="What is Managed Learning Solutions?" 
+              className="absolute inset-0 w-full h-full object-cover" 
+            />
+          </motion.div>
+
+          {/* Right Side: Title + Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="w-full md:w-1/2 flex flex-col justify-center py-16 md:py-24 px-8 md:px-16 lg:pr-24 xl:pr-32"
+          >
+            <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-6">
                 What is Managed Learning Solutions?
               </h2>
-              <div className="w-20 h-1 bg-maple-green mb-8"></div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <p className="text-lg text-slate-300 leading-relaxed font-light">
+            <div className="w-20 h-1 bg-maple-green mb-8"></div>
+            <p className="text-lg text-slate-300 leading-relaxed font-light">
                 For organizations that want to focus on their core business, Maple offers comprehensive Managed Learning Solutions (MLS). We act as your dedicated, fully outsourced Learning & Development department, handling everything from strategic planning to content creation, delivery, and reporting.
               </p>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       
       {/* Samples Showcase */}
-      <section id="samples" className="py-24 relative z-10 border-t border-white/5 bg-slate-950">
+      <section id="samples" className="py-12 md:py-16 relative z-10 border-t border-white/5 bg-slate-950">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <ServiceSamplesCarousel samples={relevantSamples} />
         </div>
@@ -128,14 +135,14 @@ export default function ManagedLearningSolutionsPage() {
 
       
       {/* Process */}
-      <section className="py-24 relative z-10 border-t border-white/5 bg-slate-900/30">
+      <section className="py-12 md:py-16 relative z-10 border-t border-white/5 bg-slate-900/30">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="text-center mb-20">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
+              className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-4"
             >
               Our Process
             </motion.h2>
@@ -257,14 +264,14 @@ export default function ManagedLearningSolutionsPage() {
       </section>
 
       {/* Key Capabilities */}
-      <section className="py-24 relative z-10 bg-slate-900/30">
+      <section className="py-12 md:py-16 relative z-10 bg-slate-900/30">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="text-center mb-16">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
+              className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-4"
             >
               Key Capabilities
             </motion.h2>
@@ -359,14 +366,14 @@ export default function ManagedLearningSolutionsPage() {
 
       
       {/* Why Maple */}
-      <section className="py-24 relative z-10 bg-slate-900/30 border-t border-white/5">
+      <section className="py-12 md:py-16 relative z-10 bg-slate-900/30 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="text-center mb-16">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
+              className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-4"
             >
               Why Choose Maple
             </motion.h2>
@@ -434,14 +441,14 @@ export default function ManagedLearningSolutionsPage() {
 
       
       {/* Use Cases */}
-      <section className="py-24 relative z-10 border-t border-white/5">
+      <section className="py-12 md:py-16 relative z-10 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="mb-16">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
+              className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-4"
             >
               Where It Applies
             </motion.h2>
@@ -507,14 +514,14 @@ export default function ManagedLearningSolutionsPage() {
 
       
       {/* FAQs */}
-      <section className="py-24 relative z-10 border-t border-white/5">
+      <section className="py-12 md:py-16 relative z-10 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-16">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-white mb-6"
+              className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-6"
             >
               Frequently Asked Questions
             </motion.h2>
@@ -565,7 +572,7 @@ export default function ManagedLearningSolutionsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 relative bg-transparent overflow-hidden px-4 md:px-6">
+      <section className="py-12 md:py-16 relative bg-transparent overflow-hidden px-4 md:px-6">
         <div className="max-w-[1200px] mx-auto relative z-10">
           <CtaCard
             title="Ready to Create Better Managed Learning Solutions?"

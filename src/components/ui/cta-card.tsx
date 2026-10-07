@@ -91,7 +91,7 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
         >
           <div className="flex flex-col items-start text-left text-white pr-4">
             <motion.h2
-              className="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-[56px] leading-tight"
+              className="font-satoshi font-bold text-4xl md:text-5xl font-extrabold tracking-tight lg:text-[56px] leading-tight"
               variants={itemVariants}
             >
               {title}

@@ -6,14 +6,14 @@ import { motion } from "framer-motion"
 
 export default function ClientLogos() {
   return (
-    <section className="py-24 relative bg-transparent">
+    <section className="py-12 md:py-16 relative bg-transparent">
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-3xl md:text-4xl text-slate-300 font-light mb-16 tracking-tight"
+          className="font-satoshi font-bold text-4xl md:text-5xl text-center text-slate-300 mb-16 tracking-tight"
         >
           Companies we <span className="font-semibold text-white">collaborate</span> with.
         </motion.h2>

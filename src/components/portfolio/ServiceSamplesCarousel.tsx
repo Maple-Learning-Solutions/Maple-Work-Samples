@@ -20,7 +20,7 @@ export default function ServiceSamplesCarousel({ samples, serviceName }: Service
   if (displaySamples.length === 0) {
     return (
       <div className="text-center py-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Explore Our Work</h2>
+        <h2 className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-6">Explore Our Work</h2>
         <div className="max-w-2xl mx-auto bg-slate-950/50 border border-white/10 rounded-2xl p-12">
           <div className="inline-flex w-16 h-16 rounded-full bg-white/5 items-center justify-center mb-6">
             <span className="text-3xl">🚀</span>
@@ -42,7 +42,7 @@ export default function ServiceSamplesCarousel({ samples, serviceName }: Service
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-white mb-4"
+          className="font-satoshi font-bold text-4xl md:text-5xl text-white mb-4"
         >
           Explore Our Work
         </motion.h2>
