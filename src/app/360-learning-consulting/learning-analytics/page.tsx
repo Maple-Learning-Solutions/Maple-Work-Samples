@@ -78,12 +78,7 @@ export default function LearningAnalyticsPage() {
               >
                 Explore Our Work
               </Link>
-              <Link 
-                href="#contact" 
-                className="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all backdrop-blur-sm border border-white/10 text-center"
-              >
-                Let's Talk
-              </Link>
+              <a href="https://www.maplelearningsolutions.com/contact" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all backdrop-blur-sm border border-white/10 text-center">Let's Talk</a>
             </motion.div>
           </div>
         </div>
@@ -515,7 +510,7 @@ export default function LearningAnalyticsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16 relative bg-transparent overflow-hidden px-4 md:px-6">
+      <section id="contact" className="py-12 md:py-16 relative bg-transparent overflow-hidden px-4 md:px-6">
         <div className="max-w-[1200px] mx-auto relative z-10">
           <CtaCard
             title="Ready to Create Better Learning Analytics & Data Insights?"
@@ -523,9 +518,7 @@ export default function LearningAnalyticsPage() {
             buttonText="Talk to Maple"
             inputPlaceholder="Email address"
             imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-            onButtonClick={() => {
-              window.location.href = "mailto:info@maplelearningsolutions.com?subject=Inquiry: Learning Analytics & Data Insights";
-            }}
+            buttonHref="https://www.maplelearningsolutions.com/contact"
           />
         </div>
       </section>

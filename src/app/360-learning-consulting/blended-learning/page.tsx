@@ -78,12 +78,7 @@ export default function BlendedLearningPage() {
               >
                 Explore Our Work
               </Link>
-              <Link 
-                href="#contact" 
-                className="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all backdrop-blur-sm border border-white/10 text-center"
-              >
-                Let's Talk
-              </Link>
+              <a href="https://www.maplelearningsolutions.com/contact" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all backdrop-blur-sm border border-white/10 text-center">Let's Talk</a>
             </motion.div>
           </div>
         </div>
@@ -507,7 +502,7 @@ export default function BlendedLearningPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16 relative bg-transparent overflow-hidden px-4 md:px-6">
+      <section id="contact" className="py-12 md:py-16 relative bg-transparent overflow-hidden px-4 md:px-6">
         <div className="max-w-[1200px] mx-auto relative z-10">
           <CtaCard
             title="Ready to Create Better Blended Learning Journeys?"
@@ -515,9 +510,7 @@ export default function BlendedLearningPage() {
             buttonText="Talk to Maple"
             inputPlaceholder="Email address"
             imageSrc="https://images.unsplash.com/photo-1531538512162-87a747970b89?q=80&w=2074&auto=format&fit=crop"
-            onButtonClick={() => {
-              window.location.href = "mailto:info@maplelearningsolutions.com?subject=Inquiry: Blended Learning Journeys";
-            }}
+            buttonHref="https://www.maplelearningsolutions.com/contact"
           />
         </div>
       </section>

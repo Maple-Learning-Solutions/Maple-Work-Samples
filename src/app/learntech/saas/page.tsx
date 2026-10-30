@@ -74,12 +74,14 @@ export default function SaasPage() {
               >
                 Start Free Trial
               </Link>
-              <Link 
-                href="#contact" 
+              <a
+                href="https://www.maplelearningsolutions.com/contact"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-white/5 text-white font-semibold rounded-xl hover:bg-white/10 transition-all backdrop-blur-sm border border-white/10 text-center flex items-center justify-center gap-2"
               >
                 Book a Demo <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </motion.div>
           </div>
 
@@ -422,7 +424,19 @@ export default function SaasPage() {
         </div>
       </section>
 
-    
+      {/* CTA */}
+      <section id="contact" className="py-12 md:py-16 relative bg-transparent overflow-hidden px-4 md:px-6">
+        <div className="max-w-[1200px] mx-auto relative z-10">
+          <CtaCard
+            title="Ready to Create Better SaaS Learning Platforms?"
+            description="Let's design a learning solution that combines meaningful learning, engaging experiences, and the right technology for your organization."
+            buttonText="Talk to Maple"
+            inputPlaceholder="Email address"
+            imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+            buttonHref="https://www.maplelearningsolutions.com/contact"
+          />
+        </div>
+      </section>
     </div>
   )
 }

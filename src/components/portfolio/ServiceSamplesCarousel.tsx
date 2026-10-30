@@ -28,7 +28,7 @@ export default function ServiceSamplesCarousel({ samples, serviceName }: Service
           <h3 className="text-2xl font-bold text-white mb-4">Sample Showcase Coming Soon</h3>
           <p className="text-slate-400">
             We are currently curating the best {serviceName ? serviceName : "learning"} experiences to display here. 
-            Contact us to request a private demonstration of our capabilities in this area.
+            <a href="https://www.maplelearningsolutions.com/contact" target="_blank" rel="noopener noreferrer" className="text-maple-green hover:underline">Contact us</a> to request a private demonstration of our capabilities in this area.
           </p>
         </div>
       </div>

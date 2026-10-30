@@ -4,6 +4,7 @@ import React from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import CTA from "@/components/cta/CTA"
 
 export default function ThreeSixtyLearningConsultingCategoryPage() {
   return (
@@ -341,6 +342,7 @@ export default function ThreeSixtyLearningConsultingCategoryPage() {
           </div>
         </div>
       </section>
+          <CTA />
     </div>
   )
 }

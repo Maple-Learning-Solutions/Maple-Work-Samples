@@ -14,6 +14,7 @@ export interface CtaCardProps extends React.HTMLAttributes<HTMLDivElement> {
   description: string;
   inputPlaceholder?: string;
   buttonText: string;
+  buttonHref?: string;
   onButtonClick?: () => void;
 }
 
@@ -26,12 +27,13 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
       description,
       inputPlaceholder = "Email address",
       buttonText,
+      buttonHref = "https://www.maplelearningsolutions.com/contact",
       onButtonClick,
       ...props
     },
     ref
   ) => {
-    const handleClick = () => {
+    const handleClick = (e: React.MouseEvent) => {
       if (onButtonClick) {
         onButtonClick();
       }
@@ -106,14 +108,16 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
 
           <motion.div className="flex w-full flex-col items-start md:items-end justify-center" variants={itemVariants}>
             <div className="flex w-full max-w-md flex-col gap-3 sm:flex-row md:justify-end">
-              <Button
+              <a
+                href={buttonHref || "https://www.maplelearningsolutions.com/contact"}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={handleClick}
-                size="lg"
-                className="h-14 px-8 rounded-full bg-maple-green text-black font-semibold hover:bg-white hover:text-black transition-colors duration-300 shadow-[0_0_20px_rgba(0,220,130,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] text-base"
+                className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-maple-green text-black font-semibold hover:bg-white hover:text-black transition-colors duration-300 shadow-[0_0_20px_rgba(0,220,130,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] text-base"
               >
                 {buttonText}
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              </a>
             </div>
           </motion.div>
         </motion.div>

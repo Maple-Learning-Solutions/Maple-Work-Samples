@@ -340,12 +340,14 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center">
-          <Link
-            href="/contact"
+          <a
+            href="https://www.maplelearningsolutions.com/contact"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-2.5 rounded-full text-[14px] font-medium border border-white/10 bg-white/5 hover:bg-white text-white hover:text-slate-900 transition-all duration-300 shadow-[0_0_15px_rgba(0,220,130,0.1)] hover:shadow-[0_0_20px_rgba(0,220,130,0.3)]"
           >
             Let's Talk
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -477,12 +479,15 @@ export default function Navbar() {
               ))}
               
               <div className="mt-8 pt-6 border-t border-white/10">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://www.maplelearningsolutions.com/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="w-full block text-center px-6 py-4 rounded-xl text-base font-semibold bg-white text-black hover:bg-slate-200 transition-colors shadow-lg"
                 >
                   Let's Talk
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

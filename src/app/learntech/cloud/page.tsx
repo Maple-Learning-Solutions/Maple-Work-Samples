@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { CheckCircle2, ArrowRight, ShieldCheck, Plus, Minus, Check, X } from "lucide-react"
+import { CtaCard } from "@/components/ui/cta-card"
 
 export default function CloudPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0)
@@ -65,12 +66,14 @@ export default function CloudPage() {
               >
                 Start Free Trial
               </Link>
-              <Link 
-                href="#contact" 
+              <a 
+                href="https://www.maplelearningsolutions.com/contact" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-white/5 text-white font-semibold rounded-xl hover:bg-white/10 transition-all backdrop-blur-sm border border-white/10 text-center flex items-center justify-center gap-2"
               >
                 Book a Demo <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </motion.div>
           </div>
 
@@ -326,7 +329,9 @@ export default function CloudPage() {
                 </p>
                 <div>
                   <a 
-                    href="#contact" 
+                    href="https://www.maplelearningsolutions.com/contact" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-transparent border border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all group w-fit"
                   >
                     Talk to our Architects 
@@ -395,6 +400,20 @@ export default function CloudPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="contact" className="py-12 md:py-16 relative bg-transparent overflow-hidden px-4 md:px-6">
+        <div className="max-w-[1200px] mx-auto relative z-10">
+          <CtaCard
+            title="Ready to Create Better Cloud Learning Infrastructure?"
+            description="Let's design a learning solution that combines meaningful learning, engaging experiences, and the right technology for your organization."
+            buttonText="Talk to Maple"
+            inputPlaceholder="Email address"
+            imageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+            buttonHref="https://www.maplelearningsolutions.com/contact"
+          />
         </div>
       </section>
     </div>
