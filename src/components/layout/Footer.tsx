@@ -58,8 +58,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>&copy; {new Date().getFullYear()} Maple Learning Solutions. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
+            <Link href="https://www.maplelearningsolutions.com/privacy-policy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
+            <Link href="https://www.maplelearningsolutions.com/terms-conditions" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
