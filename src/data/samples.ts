@@ -10,6 +10,7 @@ export interface WorkSample {
   url: string
   thumbnail?: string
   featured?: boolean
+  openInNewTab?: boolean
 }
 
 export const samples: WorkSample[] = [
@@ -23,6 +24,7 @@ export const samples: WorkSample[] = [
     url: "https://cenariovr.com/app/#/view/6cj",
     thumbnail: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=2070&auto=format&fit=crop",
     featured: true,
+    openInNewTab: true,
   },
   {
     id: "sample-vr-02",
@@ -34,6 +36,7 @@ export const samples: WorkSample[] = [
     url: "https://cenariovr.com/app/#/view/5n2",
     thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     featured: true,
+    openInNewTab: true,
   },
   {
     id: "sample-video-01",

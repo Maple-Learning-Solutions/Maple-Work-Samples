@@ -4,6 +4,7 @@ import { WorkSample } from "@/data/samples"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, ExternalLink, Info } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import { createPortal } from "react-dom"
 import VideoPlayer from "./VideoPlayer"
 import IframeViewer from "./IframeViewer"
 
@@ -15,7 +16,17 @@ interface SampleViewerProps {
 
 export default function SampleViewer({ sample, isOpen, onClose }: SampleViewerProps) {
   const [showInfo, setShowInfo] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const [cachedSample, setCachedSample] = useState<WorkSample | null>(sample)
   const modalRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (sample) setCachedSample(sample)
+  }, [sample])
 
   // Handle escape key
   useEffect(() => {
@@ -32,47 +43,60 @@ export default function SampleViewer({ sample, isOpen, onClose }: SampleViewerPr
     }
   }, [isOpen, onClose])
 
-  if (!sample) return null
+  const activeSample = sample || cachedSample
 
-  return (
+  if (!activeSample || !mounted) return null
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-6 lg:p-12">
+        <div className="fixed inset-0 z-[9999] flex flex-col bg-black">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0 bg-black/90 backdrop-blur-sm"
+            transition={{ duration: 0.25 }}
+            className="absolute inset-0 bg-black/95 backdrop-blur-md"
             onClick={onClose}
           />
 
           {/* Modal Container */}
           <motion.div
             ref={modalRef}
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full h-full md:rounded-2xl bg-black border border-white/10 flex flex-col overflow-hidden shadow-2xl z-10"
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.25 }}
+            className="relative w-full h-full bg-black flex flex-col overflow-hidden z-10"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-white/10 bg-slate-900/50 backdrop-blur-md z-20 absolute top-0 left-0 right-0">
-              <div className="flex items-center gap-3">
-                <h3 className="text-lg font-semibold text-white truncate max-w-[200px] sm:max-w-md md:max-w-xl">
-                  {sample.title}
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-white/10 bg-slate-900/90 backdrop-blur-md z-20 shrink-0">
+              <div className="flex items-center gap-3 min-w-0">
+                <h3 className="text-base sm:text-lg font-semibold text-white truncate max-w-[200px] sm:max-w-md md:max-w-xl">
+                  {activeSample.title}
                 </h3>
-                <span className="hidden sm:inline-block px-2 py-0.5 rounded text-xs font-medium bg-white/10 text-slate-300">
-                  {sample.solution}
+                <span className="hidden sm:inline-block px-2.5 py-0.5 rounded text-xs font-medium bg-white/10 text-slate-300 shrink-0">
+                  {activeSample.solution}
                 </span>
               </div>
               
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 shrink-0">
+                <a
+                  href={activeSample.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+                  aria-label="Open in new tab"
+                  title="Open in new tab"
+                >
+                  <ExternalLink size={20} />
+                </a>
                 <button
                   onClick={() => setShowInfo(!showInfo)}
                   className={`p-2 rounded-full transition-colors ${showInfo ? 'bg-white text-black' : 'text-slate-400 hover:text-white hover:bg-white/10'}`}
                   aria-label="Toggle Information"
+                  title="Toggle Information"
                 >
                   <Info size={20} />
                 </button>
@@ -80,6 +104,7 @@ export default function SampleViewer({ sample, isOpen, onClose }: SampleViewerPr
                   onClick={onClose}
                   className="p-2 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
                   aria-label="Close viewer"
+                  title="Close viewer"
                 >
                   <X size={24} />
                 </button>
@@ -87,13 +112,19 @@ export default function SampleViewer({ sample, isOpen, onClose }: SampleViewerPr
             </div>
 
             {/* Content Area */}
-            <div className="flex-1 w-full h-full relative pt-[60px] flex">
+            <div className="flex-1 w-full h-full relative flex overflow-hidden">
               {/* Main Viewer */}
-              <div className={`flex-1 relative transition-all duration-300 ${showInfo ? 'md:w-3/4' : 'w-full'}`}>
-                {sample.type === "video" ? (
-                  <VideoPlayer url={sample.url} />
+              <div className={`flex-1 relative transition-all duration-300 ${showInfo ? 'md:w-3/4' : 'w-full'} h-full`}>
+                {activeSample.type === "video" ? (
+                  <VideoPlayer url={activeSample.url} />
                 ) : (
-                  <IframeViewer url={sample.url} title={sample.title} />
+                  <IframeViewer 
+                    url={activeSample.url} 
+                    title={activeSample.title}
+                    thumbnail={activeSample.thumbnail}
+                    description={activeSample.description}
+                    openInNewTab={activeSample.openInNewTab}
+                  />
                 )}
               </div>
 
@@ -109,27 +140,37 @@ export default function SampleViewer({ sample, isOpen, onClose }: SampleViewerPr
                     <div className="p-6 w-[320px]">
                       <h4 className="text-lg font-semibold text-white mb-2">About this experience</h4>
                       <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                        {sample.description}
+                        {activeSample.description}
                       </p>
                       
-                      <div className="space-y-4">
+                      <div className="space-y-4 mb-6">
                         <div>
                           <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Solution Type</div>
-                          <div className="text-sm font-medium text-white">{sample.solution}</div>
+                          <div className="text-sm font-medium text-white">{activeSample.solution}</div>
                         </div>
-                        {sample.industry && (
+                        {activeSample.industry && (
                           <div>
                             <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Industry</div>
-                            <div className="text-sm font-medium text-white">{sample.industry}</div>
+                            <div className="text-sm font-medium text-white">{activeSample.industry}</div>
                           </div>
                         )}
                         <div>
                           <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Format</div>
-                          <div className="text-sm font-medium text-white capitalize">{sample.type}</div>
+                          <div className="text-sm font-medium text-white capitalize">{activeSample.type}</div>
                         </div>
                       </div>
-                      
 
+                      <div className="pt-4 border-t border-white/10">
+                        <a
+                          href={activeSample.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-maple-green text-slate-950 font-semibold text-sm hover:bg-maple-green/90 transition-colors shadow-md"
+                        >
+                          <span>Open in New Tab</span>
+                          <ExternalLink size={16} />
+                        </a>
+                      </div>
                     </div>
                   </motion.div>
                 )}
@@ -154,27 +195,38 @@ export default function SampleViewer({ sample, isOpen, onClose }: SampleViewerPr
                   </button>
                   <h4 className="text-lg font-semibold text-white mb-2 pr-8">About this experience</h4>
                   <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                    {sample.description}
+                    {activeSample.description}
                   </p>
                   
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Solution Type</div>
-                      <div className="text-sm font-medium text-white">{sample.solution}</div>
+                      <div className="text-sm font-medium text-white">{activeSample.solution}</div>
                     </div>
-                    {sample.industry && (
+                    {activeSample.industry && (
                       <div>
                         <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Industry</div>
-                        <div className="text-sm font-medium text-white">{sample.industry}</div>
+                        <div className="text-sm font-medium text-white">{activeSample.industry}</div>
                       </div>
                     )}
                   </div>
+
+                  <a
+                    href={activeSample.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-maple-green text-slate-950 font-semibold text-sm hover:bg-maple-green/90 transition-colors shadow-md"
+                  >
+                    <span>Open in New Tab</span>
+                    <ExternalLink size={16} />
+                  </a>
                 </motion.div>
               )}
             </AnimatePresence>
           </motion.div>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   )
 }

@@ -20,7 +20,18 @@ export default function SimulationPage() {
   }
 
   // Find relevant samples
-  const relevantSamples = samples // TODO: Filter specific samples per page using sample.id
+  const simulationSampleIds = [
+    "sample-factory-vr-tour",
+    "sample-pharma-vr-demo",
+    "sample-vr-02",
+    "sample-vr-01",
+    "sample-video-02",
+    "sample-elearning-01",
+    "video-learning-01",
+  ]
+  const relevantSamples = simulationSampleIds
+    .map(id => samples.find(sample => sample.id === id))
+    .filter((sample): sample is (typeof samples)[0] => sample !== undefined)
 
   return (
     <div className="min-h-screen bg-transparent text-white selection:bg-maple-green/30">

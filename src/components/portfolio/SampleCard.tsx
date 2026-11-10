@@ -10,16 +10,8 @@ interface SampleCardProps {
 }
 
 export default function SampleCard({ sample, onClick }: SampleCardProps) {
-  return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.3 }}
-      className="group relative flex flex-col w-full h-full bg-slate-900/50 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-maple-green/50 transition-colors duration-300"
-      onClick={() => onClick(sample)}
-    >
+  const cardContent = (
+    <>
       {/* Thumbnail Area */}
       <div className="relative w-full shrink-0 aspect-video bg-black overflow-hidden flex items-center justify-center">
         {sample.thumbnail ? (
@@ -65,9 +57,49 @@ export default function SampleCard({ sample, onClick }: SampleCardProps) {
         </div>
         
         <div className="flex items-center text-sm font-medium text-slate-400 group-hover:text-white transition-colors pt-4 border-t border-white/10">
-          View Experience <span className="ml-2 transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+          {sample.openInNewTab ? (
+            <span className="flex items-center text-maple-green group-hover:text-maple-green font-medium">
+              Open in New Tab <span className="ml-2 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">&nearr;</span>
+            </span>
+          ) : (
+            <>
+              View Experience <span className="ml-2 transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </>
+          )}
         </div>
       </div>
+    </>
+  )
+
+  if (sample.openInNewTab) {
+    return (
+      <motion.a
+        href={sample.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        layout
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.9 }}
+        transition={{ duration: 0.3 }}
+        className="group relative flex flex-col w-full h-full bg-slate-900/50 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-maple-green/50 transition-colors duration-300 block no-underline"
+      >
+        {cardContent}
+      </motion.a>
+    )
+  }
+
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      transition={{ duration: 0.3 }}
+      className="group relative flex flex-col w-full h-full bg-slate-900/50 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-maple-green/50 transition-colors duration-300"
+      onClick={() => onClick(sample)}
+    >
+      {cardContent}
     </motion.div>
   )
 }

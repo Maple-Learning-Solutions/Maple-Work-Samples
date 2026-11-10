@@ -9,13 +9,14 @@ import SampleViewer from "./SampleViewer"
 interface ServiceSamplesCarouselProps {
   samples: WorkSample[]
   serviceName?: string
+  maxSamples?: number
 }
 
-export default function ServiceSamplesCarousel({ samples, serviceName }: ServiceSamplesCarouselProps) {
+export default function ServiceSamplesCarousel({ samples, serviceName, maxSamples }: ServiceSamplesCarouselProps) {
   const [selectedSample, setSelectedSample] = useState<WorkSample | null>(null)
   
-  // Show only up to 3 samples to maintain the clean 3-card layout
-  const displaySamples = samples.slice(0, 3)
+  // Display all relevant samples, or limit if maxSamples is specified
+  const displaySamples = maxSamples ? samples.slice(0, maxSamples) : samples
 
   if (displaySamples.length === 0) {
     return (
@@ -33,6 +34,14 @@ export default function ServiceSamplesCarousel({ samples, serviceName }: Service
         </div>
       </div>
     )
+  }
+
+  const handleSelectSample = (sample: WorkSample) => {
+    if (sample.openInNewTab) {
+      window.open(sample.url, "_blank", "noopener,noreferrer")
+      return
+    }
+    setSelectedSample(sample)
   }
 
   return (
@@ -66,7 +75,7 @@ export default function ServiceSamplesCarousel({ samples, serviceName }: Service
             <SampleCard 
               key={sample.id} 
               sample={sample} 
-              onClick={() => setSelectedSample(sample)} 
+              onClick={handleSelectSample} 
             />
           ))}
         </AnimatePresence>

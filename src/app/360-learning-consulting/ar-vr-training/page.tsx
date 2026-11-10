@@ -20,7 +20,17 @@ export default function ArVrTrainingPage() {
   }
 
   // Find relevant samples
-  const relevantSamples = samples.filter(sample => ["sample-vr-01", "sample-vr-02", "sample-pharma-vr-demo"].includes(sample.id))
+  const vrSampleIds = [
+    "sample-vr-01",
+    "sample-vr-02",
+    "sample-pharma-vr-demo",
+    "sample-factory-vr-tour",
+    "sample-video-02",
+    "video-learning-01",
+  ]
+  const relevantSamples = vrSampleIds
+    .map(id => samples.find(sample => sample.id === id))
+    .filter((sample): sample is (typeof samples)[0] => sample !== undefined)
 
   return (
     <div className="min-h-screen bg-transparent text-white selection:bg-maple-green/30">
