@@ -1,7 +1,7 @@
 "use client"
 
 import { WorkSample } from "@/data/samples"
-import { Play, ExternalLink } from "lucide-react"
+import { Play, ExternalLink, ArrowUpRight, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 
 interface SampleCardProps {
@@ -59,12 +59,14 @@ export default function SampleCard({ sample, onClick }: SampleCardProps) {
         <div className="flex items-center text-sm font-medium text-slate-400 group-hover:text-white transition-colors pt-4 border-t border-white/10">
           {sample.openInNewTab ? (
             <span className="flex items-center text-maple-green group-hover:text-maple-green font-medium">
-              Open in New Tab <span className="ml-2 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">&nearr;</span>
+              Open in New Tab
+              <ArrowUpRight className="ml-1.5 w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </span>
           ) : (
-            <>
-              View Experience <span className="ml-2 transform group-hover:translate-x-1 transition-transform">&rarr;</span>
-            </>
+            <span className="flex items-center">
+              View Experience
+              <ArrowRight className="ml-1.5 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+            </span>
           )}
         </div>
       </div>

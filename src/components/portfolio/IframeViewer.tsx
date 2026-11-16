@@ -100,7 +100,7 @@ export default function IframeViewer({ url, title, thumbnail, description, openI
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-maple-green text-slate-950 font-semibold text-sm hover:bg-maple-green/90 transition-colors"
           >
-            Open in New Tab <ExternalLink size={16} />
+            Open in New Tab 
           </a>
         </div>
       ) : (
