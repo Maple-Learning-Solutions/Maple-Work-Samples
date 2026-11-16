@@ -20,7 +20,15 @@ export default function GamificationPage() {
   }
 
   // Find relevant samples
-  const relevantSamples = samples.filter(sample => ["gamification-sample-1", "sample-memory-flash-card", "sample-factory-vr-tour"].includes(sample.id))
+  const gamificationSampleIds = [
+    "sample-memory-flash-card",
+    "sample-video-01",
+    "sample-video-02",
+    "sample-factory-vr-tour",
+  ]
+  const relevantSamples = gamificationSampleIds
+    .map(id => samples.find(sample => sample.id === id))
+    .filter((sample): sample is (typeof samples)[0] => sample !== undefined)
 
   return (
     <div className="min-h-screen bg-transparent text-white selection:bg-maple-green/30">
