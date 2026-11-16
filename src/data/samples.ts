@@ -16,7 +16,7 @@ export interface WorkSample {
 export const samples: WorkSample[] = [
   {
     id: "sample-vr-01",
-    title: "CenarioVR Experience",
+    title: "VR Experience",
     description: "Immersive 360° virtual reality training scenario.",
     solution: "VR / AR",
     industry: "Manufacturing",
